@@ -175,10 +175,17 @@ https://tu-sitio/pages/2026-10-21.html
 
 El repositorio incluye el workflow `.github/workflows/pages.yml`, que genera y publica el sitio todos los días a las 00:05 de Bogotá.
 
-1. Crea un repositorio en GitHub y sube el proyecto a la rama `main`.
-2. En **Settings → Pages → Build and deployment**, elige **GitHub Actions** como fuente.
-3. Ejecuta el workflow una vez desde **Actions → Generar y publicar predicciones → Run workflow**.
-4. El sitio queda en `https://tuusuario.github.io/turepo/` y cada fecha en
+1. Crea un repositorio **vacío** en GitHub, sin README ni `.gitignore`, y copia su URL.
+2. Conecta el repositorio local y sube la rama `main`:
+
+   ```bash
+   git remote add origin https://github.com/TUUSUARIO/TUREPO.git
+   git push -u origin main
+   ```
+
+3. En **Settings → Pages → Build and deployment**, elige **GitHub Actions** como fuente.
+4. Ejecuta el workflow una vez desde **Actions → Generar y publicar predicciones → Run workflow**.
+5. El sitio queda en `https://tuusuario.github.io/turepo/` y cada fecha en
    `https://tuusuario.github.io/turepo/pages/2026-10-21.html`.
 
 El workflow también hace commit de `index.html`, `pages/`, `data/` y `docs/` para conservar el archivo histórico. Si prefieres actualizar desde tu Mac, puedes usar el cron de arriba y luego hacer `git push`; GitHub Pages publicará los cambios.
