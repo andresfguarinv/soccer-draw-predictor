@@ -1,8 +1,8 @@
 {
   "date": "2026-10-21",
   "date_label": "Miércoles 21/10/2026",
-  "generated_at": "2026-10-20T19:37:58.750023-05:00",
-  "cutoff": "19:37",
+  "generated_at": "2026-10-21T04:53:13.502429-05:00",
+  "cutoff": "04:53",
   "source": "ESPN gratis (sin API key) + revisión manual",
   "leagues": [
     {
@@ -121,12 +121,12 @@
       "time": "13:00",
       "home": "Levante",
       "away": "Athletic Club",
-      "status": "candidate",
+      "status": "rejected",
       "score": 5,
       "odds": [
         [
           "DraftKings",
-          3.2
+          3.3
         ]
       ],
       "criteria": [
@@ -171,7 +171,7 @@
           "17° y 11°"
         ]
       ],
-      "note": "Levante 17° (7 pts) y Athletic Club 11° (9 pts). Empates 33% casa / 33% fuera. Goles 2.68. H2H sin dato.",
+      "note": "Cuota 3.30 fuera de 2.60–3.20. Levante 17° (7 pts) y Athletic Club 11° (9 pts). Empates 33% casa / 33% fuera. Goles 2.68. H2H sin dato.",
       "alerts": "No cumple: Zona media (6-15), Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5.",
       "big": []
     },
@@ -187,11 +187,11 @@
       "odds": [
         [
           "DraftKings",
-          4.4
+          4.5
         ]
       ],
       "criteria": [],
-      "note": "Cuota 4.40 fuera de 2.60–3.20; no se analiza.",
+      "note": "Cuota 4.50 fuera de 2.60–3.20; no se analiza.",
       "alerts": "",
       "big": []
     }
