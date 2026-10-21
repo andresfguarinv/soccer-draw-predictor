@@ -139,8 +139,7 @@
         ]
       ],
       "note": "Pereira es la peor ofensiva del torneo (8 goles en 13) y empata el 50% en casa. Chicó solo ha empatado 2 de 6 fuera, pero llega necesitado.",
-      "alerts": "Asimetría motivacional: Pereira está 18° en el Clausura y casi sin opciones; Chicó se juega la permanencia. Si aplicas el filtro de simetría, baja a 5/8.",
-      "big": []
+      "alerts": "Asimetría motivacional: Pereira está 18° en el Clausura y casi sin opciones; Chicó se juega la permanencia. Si aplicas el filtro de simetría, baja a 5/8."
     },
     {
       "league": "col",
@@ -204,8 +203,7 @@
         ]
       ],
       "note": "El mejor dato de empates fuera de la liga (5/6), pero la cuota y el perfil de goles lo sacan del rango.",
-      "alerts": "",
-      "big": []
+      "alerts": ""
     },
     {
       "league": "col",
@@ -214,15 +212,12 @@
       "time": "18:30",
       "home": "Cúcuta Deportivo",
       "away": "Atlético Nacional",
-      "status": "excluded",
+      "status": "pending",
       "score": null,
       "odds": [],
       "criteria": [],
-      "note": "Filtro 1: Atlético Nacional es equipo grande. No se evalúa.",
-      "alerts": "",
-      "big": [
-        "Atlético Nacional"
-      ]
+      "note": "Referencia histórica: no hay cuota de empate registrada. Se evalúa como cualquier otro partido.",
+      "alerts": ""
     },
     {
       "league": "col",
@@ -231,15 +226,12 @@
       "time": "20:30",
       "home": "Millonarios",
       "away": "Once Caldas",
-      "status": "excluded",
+      "status": "pending",
       "score": null,
       "odds": [],
       "criteria": [],
-      "note": "Filtro 1: Millonarios es equipo grande. H2H con 4 empates en 5, pero no se evalúa.",
-      "alerts": "",
-      "big": [
-        "Millonarios"
-      ]
+      "note": "Referencia histórica: no hay cuota de empate registrada. H2H con 4 empates en 5; se evalúa como cualquier otro partido.",
+      "alerts": ""
     }
   ],
   "warnings": []

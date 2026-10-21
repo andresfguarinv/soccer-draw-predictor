@@ -80,20 +80,18 @@ El plan free de API-Football responde `Free plans do not have access to this sea
 
 1. Consulta los fixtures del día para las 10 ligas.
 2. Omite partidos que ya empezaron o terminaron, comparando la hora de inicio con `--now` (America/Bogota).
-3. Excluye equipos grandes con la lista `BIG_TEAMS_RAW`.
-4. Se queda con las cuotas de empate en **2.60–3.20**.
-5. Para los partidos con cuota válida o cercana (2.40–3.40), consulta:
+3. Se queda con las cuotas de empate en **2.60–3.20**.
+4. Para los partidos con cuota válida o cercana (2.40–3.40), consulta:
    - Standings: posición, puntos y tamaño de la tabla.
    - Estadísticas del local y del visitante: empates en casa/fuera y promedio de goles de la temporada actual.
    - H2H: últimos 5 partidos terminados (temporada actual + dos anteriores).
    - Goleadores: proxy de "goleador en forma" (≥ 8 goles en la temporada).
-6. Calcula el score base de 8 criterios.
-7. Marca:
+5. Calcula el score base de 8 criterios.
+6. Marca:
    - `candidate`: score ≥ 5/8 y al menos una cuota en 2.60–3.20.
    - `rejected`: score < 5/8 o cuota fuera de rango.
-   - `excluded`: equipo grande.
    - `pending`: no hay cuota de empate disponible.
-8. Inyecta los datos en `index.html`, crea `pages/YYYY-MM-DD.html` y guarda `data/YYYY-MM-DD.json`.
+7. Inyecta los datos en `index.html`, crea `pages/YYYY-MM-DD.html` y guarda `data/YYYY-MM-DD.json`.
 
 ## Score y ajustes
 
@@ -105,13 +103,11 @@ En la parte superior, la tarjeta **Candidatos** funciona como filtro: al hacer c
 
 ## Estado actual
 
-El `index.html` incluido es el snapshot generado con ESPN para el **20/10/2026 a las 15:42 (Bogotá)**. El candidato es **Deportivo Pereira vs Boyacá Chicó**, 6/8, con cuota de empate **2.95 en DraftKings**.
+El `index.html` incluido es el último snapshot generado con ESPN. Las páginas por fecha quedan en `pages/` y el sitio publicable en `docs/`. Si no hay candidatos, el HTML recomienda esperar.
 
-## Configuración de ligas y equipos
+## Configuración de ligas
 
 - Las ligas están en `LEAGUES`, dentro de `generate_daily.py`. Cada una tiene su `espn_slug`, país y prioridad.
-- Los equipos grandes están en `BIG_TEAMS_RAW`. La comparación ignora tildes, mayúsculas y sufijos como `FC`, `CF`, `Club` o `AC`.
-- Si un equipo recién descendido debe excluirse en una segunda división, agrégalo a la lista de esa liga.
 - Si ESPN cambia un slug, actualízalo en `LEAGUES`.
 
 ## Temporadas

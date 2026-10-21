@@ -1,9 +1,9 @@
 ---
 name: soccer-draw-predictor
 description: >
-  Identifica partidos de fútbol con alta probabilidad de empate, con cuota alrededor de 3.0 o menos y sin equipos
-  grandes. Usa esta skill cuando el usuario quiera encontrar partidos propensos al empate, analizar ligas o equipos
-  con alta tasa de empates, filtrar partidos evitando equipos grandes o calcular cuotas esperadas alrededor de 3.0.
+  Identifica partidos de fútbol con alta probabilidad de empate, con cuota alrededor de 3.0 o menos. Usa esta skill
+  cuando el usuario quiera encontrar partidos propensos al empate, analizar ligas o equipos con alta tasa de empates
+  o calcular cuotas esperadas alrededor de 3.0.
   También sirve para regenerar el HTML diario con ESPN (gratis, sin API key) y revisar candidatos.
   Trigger con: "partidos para empate", "análisis de empates", "qué partido tiene más probabilidad de empatar",
   "cuota empate", "predicciones para [fecha]", o cualquier combinación de fútbol + empate + apuestas.
@@ -135,31 +135,11 @@ La configuración vive en `LEAGUES`, dentro de `generate_daily.py`. Si ESPN camb
 |--------|-------------|
 | `candidate` | Score ≥ 5/8 y al menos una cuota en 2.60–3.20. |
 | `rejected` | Score < 5/8, o cuota fuera de 2.60–3.20. |
-| `excluded` | Participa un equipo grande. No se evalúa. |
 | `pending` | No hay cuota de empate disponible. |
 
 ---
 
-## Filtro 1 — Equipos grandes (obligatorio)
-
-Excluir cualquier partido donde participe:
-
-- **España:** Real Madrid, Barcelona, Atlético Madrid.
-- **Italia:** Juventus, Inter, AC Milan, Napoli.
-- **Francia:** PSG / Paris Saint-Germain.
-- **Alemania:** Bayern Múnich, Borussia Dortmund.
-- **Inglaterra:** Manchester City, Arsenal, Liverpool, Chelsea, Manchester United, Tottenham.
-- **Portugal:** Benfica, Porto, Sporting CP.
-- **Colombia:** Atlético Nacional, Millonarios, América de Cali, Junior, Deportivo Cali.
-- **Paraguay:** Olimpia, Cerro Porteño, Libertad, Guaraní.
-- **Criterio general:** top 3-4 de cualquier liga en los últimos 3 años.
-
-La lista real está en `BIG_TEAMS_RAW`. La comparación ignora tildes, mayúsculas y sufijos como `FC`, `CF`, `Club` o
-`AC`. Si un recién descendido debe excluirse en una segunda división, agrégalo a la lista de esa liga.
-
----
-
-## Filtro 2 — Cuota de empate
+## Filtro 1 — Cuota de empate
 
 - Rango válido: **2.60–3.20**.
 - Cuota ideal: entre **2.60 y 3.00**.
@@ -170,7 +150,7 @@ La lista real está en `BIG_TEAMS_RAW`. La comparación ignora tildes, mayúscul
 
 ---
 
-## Filtro 3 — Score estadístico (base de 8 criterios)
+## Filtro 2 — Score estadístico (base de 8 criterios)
 
 | # | Criterio | Descripción |
 |---|----------|-------------|

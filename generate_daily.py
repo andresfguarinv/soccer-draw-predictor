@@ -15,7 +15,7 @@ Uso:
 
 El script:
   1. Consulta los fixtures del día para las 10 ligas.
-  2. Descarta equipos grandes y partidos ya iniciados.
+  2. Descarta partidos ya iniciados.
   3. Lee cuotas de empate y analiza solo los partidos con cuota cercana al rango.
   4. Calcula los 8 criterios con standings, stats local/visitante, H2H y goleadores.
   5. Inyecta los datos en index.html y guarda una copia con la fecha en pages/YYYY-MM-DD.html.
@@ -72,23 +72,6 @@ LEAGUES = [
     {"id": "usa",  "api_id": 253, "espn_slug": "usa.1", "name": "MLS",                  "country": "Estados Unidos", "flag": "🇺🇸", "level": "Media",  "calendar": True},
 ]
 
-# Equipos grandes por liga. Añade aquí los que quieras excluir.
-# La comparación normaliza tildes, mayúsculas y sufijos como FC/CF/Club.
-BIG_TEAMS_RAW = {
-    "col":  ["Atlético Nacional", "Millonarios", "América de Cali", "Atlético Junior", "Junior", "Deportivo Cali"],
-    "par":  ["Olimpia", "Cerro Porteño", "Libertad", "Guaraní"],
-    "ita":  ["Juventus", "Inter", "Inter Milan", "AC Milan", "Napoli"],
-    "esp":  ["Real Madrid", "Barcelona", "Atlético Madrid"],
-    "fra":  ["PSG", "Paris Saint-Germain"],
-    # Segundas divisiones: la lista explícita de la skill no incluye equipos.
-    # Si quieres excluir a un recién descendido, agrégalo aquí.
-    "itb":  [],
-    "esp2": [],
-    "eng2": [],
-    "ger2": [],
-    "usa":  [],
-}
-
 FINISHED_STATUS = {"FT", "AET", "PEN"}
 MATCH_WINNER_NAMES = {"match winner", "1x2", "full time result"}
 DRAW_NAMES = {"draw", "x", "empate"}
@@ -129,24 +112,6 @@ def norm(value: str) -> str:
     text = text.lower()
     text = re.sub(r"[^a-z0-9]+", " ", text)
     return " ".join(text.split())
-
-
-TEAM_STOPWORDS = {"fc", "cf", "sc", "afc", "cd", "ca", "ac", "club", "the"}
-
-
-def team_key(value: str) -> str:
-    tokens = [t for t in norm(value).split() if t not in TEAM_STOPWORDS]
-    return " ".join(tokens)
-
-
-BIG_TEAMS = {
-    league_id: {team_key(name) for name in names}
-    for league_id, names in BIG_TEAMS_RAW.items()
-}
-
-
-def is_big(league_id: str, team_name: str) -> bool:
-    return team_key(team_name) in BIG_TEAMS.get(league_id, set())
 
 
 def date_label(d: date) -> str:
@@ -1229,7 +1194,6 @@ def analyze_fixture(
         "criteria": criteria,
         "note": note.strip(),
         "alerts": " ".join(alerts).strip(),
-        "big": [],
     }
 
 
@@ -1244,30 +1208,7 @@ def build_match_basic(
     away = teams.get("away") or {}
     home_name = home.get("name") or "Local"
     away_name = away.get("name") or "Visitante"
-
-    big = []
-    if is_big(league["id"], home_name):
-        big.append(home_name)
-    if is_big(league["id"], away_name):
-        big.append(away_name)
-
     display_odds = pick_display_odds(odds_pairs)
-    if big:
-        return {
-            "league": league["id"],
-            "fixture_id": (item.get("fixture") or {}).get("id"),
-            "kickoff": kickoff.isoformat(),
-            "time": kickoff.strftime("%H:%M"),
-            "home": home_name,
-            "away": away_name,
-            "status": "excluded",
-            "score": None,
-            "odds": [],
-            "criteria": [],
-            "note": "Filtro 1: " + ", ".join(big) + " es equipo grande. No se evalúa.",
-            "alerts": "",
-            "big": big,
-        }
 
     if not odds_pairs:
         return {
@@ -1283,7 +1224,6 @@ def build_match_basic(
             "criteria": [],
             "note": "Sin cuota de empate disponible. Revisar Betplay antes de considerar el partido.",
             "alerts": "",
-            "big": [],
         }
 
     valid = [odd for _, odd in odds_pairs if 2.60 <= odd <= 3.20]
@@ -1303,7 +1243,6 @@ def build_match_basic(
             "criteria": [],
             "note": f"Cuota {best:.2f} fuera de 2.60–3.20; no se analiza.",
             "alerts": "",
-            "big": [],
         }
 
     # Señal para que el llamador sepa que hay que pedir detalles.
@@ -1320,7 +1259,6 @@ def build_match_basic(
         "criteria": [],
         "note": "",
         "alerts": "",
-        "big": [],
     }
 
 

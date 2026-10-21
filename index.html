@@ -80,7 +80,6 @@
   .match{padding:9px 10px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02);transition:.15s;min-width:0}
   .match:hover{background:rgba(255,255,255,.035)}
   .match.candidate{background:linear-gradient(90deg,rgba(251,191,36,.1),rgba(251,191,36,.02));border-color:rgba(251,191,36,.25);box-shadow:inset 3px 0 0 var(--yellow)}
-  .match.excluded{opacity:.72}
   .match.pending{opacity:.85}
   .match-head{display:flex;align-items:center;gap:7px}
   .time{font-variant-numeric:tabular-nums;font-weight:800;color:var(--accent);font-size:12px;min-width:40px}
@@ -89,13 +88,11 @@
   .pill{font-size:10px;font-weight:800;padding:4px 7px;border-radius:999px;white-space:nowrap;letter-spacing:.02em}
   .pill-candidate{background:rgba(251,191,36,.15);color:var(--yellow);border:1px solid rgba(251,191,36,.3)}
   .pill-rejected{background:rgba(248,113,113,.12);color:var(--red);border:1px solid rgba(248,113,113,.28)}
-  .pill-excluded{background:rgba(148,163,184,.1);color:#cbd5e1;border:1px solid rgba(148,163,184,.25)}
   .pill-pending{background:rgba(148,163,184,.1);color:#cbd5e1;border:1px solid rgba(148,163,184,.25)}
   .match-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;font-size:10.5px;color:var(--muted);line-height:1.35}
   .odds b{color:#dbeafe;font-variant-numeric:tabular-nums}
   .odds .book{opacity:.72}
   .sep{opacity:.35}
-  .tag-big{color:var(--red)}
   .muted{color:var(--muted)}
   .note{color:var(--muted);font-size:11px;line-height:1.4;margin:5px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .note.alert{color:#fcd34d}
@@ -180,13 +177,13 @@
         <b>Metodología</b><br>
         8 criterios (zona media, diferencia de puntos, empates local/visitante, goles, H2H, goleadores y presión).
         Mínimo recomendado: <b>5/8</b>. Cuota de empate válida: <b>2.60–3.20</b>.
-        Se excluyen equipos grandes (lista explícita de la skill). El score es la base de 8 criterios;
+        El score es la base de 8 criterios;
         los ajustes cualitativos (simetría, altura, copa, expulsiones) aparecen como alertas para revisión.
         <div class="legend">
           <span><i class="dot d-g"></i> Alta (7-8)</span>
           <span><i class="dot d-y"></i> Media (5-6)</span>
           <span><i class="dot d-r"></i> Baja (&lt;5)</span>
-          <span><i class="dot d-b"></i> Sin analizar / grande</span>
+          <span><i class="dot d-b"></i> Sin analizar</span>
         </div>
       </div>
       <div>
@@ -209,8 +206,8 @@
 {
   "date": "2026-10-21",
   "date_label": "Miércoles 21/10/2026",
-  "generated_at": "2026-10-21T04:53:13.502429-05:00",
-  "cutoff": "04:53",
+  "generated_at": "2026-10-21T15:35:10.396950-05:00",
+  "cutoff": "15:35",
   "source": "ESPN gratis (sin API key) + revisión manual",
   "leagues": [
     {
@@ -292,15 +289,58 @@
       "time": "18:15",
       "home": "Llaneros",
       "away": "Deportivo Cali",
-      "status": "excluded",
-      "score": null,
-      "odds": [],
-      "criteria": [],
-      "note": "Filtro 1: Deportivo Cali es equipo grande. No se evalúa.",
-      "alerts": "",
-      "big": [
-        "Deportivo Cali"
-      ]
+      "status": "rejected",
+      "score": 2,
+      "odds": [
+        [
+          "DraftKings",
+          3.15
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "12° y 3°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "17 vs 26"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/7 = 0%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/7 = 29%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.36 y 2.07 (prom. 2.21)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "1 empates en 3"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 6 y 10 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "12° y 3° · título"
+        ]
+      ],
+      "note": "No alcanza 5/8 (2/8). Llaneros 12° (17 pts) y Deportivo Cali 3° (26 pts). Empates 0% casa / 29% fuera. Goles 2.21. H2H 1/3.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, H2H: ≥ 2 empates últimos 5, Sin goleador en forma (≥ 8 goles), Sin presión extrema."
     },
     {
       "league": "col",
@@ -314,74 +354,12 @@
       "odds": [
         [
           "DraftKings",
-          5.0
+          6.0
         ]
       ],
       "criteria": [],
-      "note": "Cuota 5.00 fuera de 2.60–3.20; no se analiza.",
-      "alerts": "",
-      "big": []
-    },
-    {
-      "league": "esp",
-      "fixture_id": "401882870",
-      "kickoff": "2026-10-21T13:00:00-05:00",
-      "time": "13:00",
-      "home": "Levante",
-      "away": "Athletic Club",
-      "status": "rejected",
-      "score": 5,
-      "odds": [
-        [
-          "DraftKings",
-          3.3
-        ]
-      ],
-      "criteria": [
-        [
-          false,
-          "Zona media (6-15)",
-          "17° y 11°"
-        ],
-        [
-          true,
-          "Diferencia de puntos ≤ 5",
-          "7 vs 9"
-        ],
-        [
-          true,
-          "Empates del local en casa ≥ 25%",
-          "1/3 = 33%"
-        ],
-        [
-          true,
-          "Empates del visitante fuera ≥ 25%",
-          "1/3 = 33%"
-        ],
-        [
-          false,
-          "Promedio de goles ≤ 2.5",
-          "3.50 y 1.86 (prom. 2.68)"
-        ],
-        [
-          null,
-          "H2H: ≥ 2 empates últimos 5",
-          "sin dato"
-        ],
-        [
-          true,
-          "Sin goleador en forma (≥ 8 goles)",
-          "máx. 3 y 2 goles"
-        ],
-        [
-          true,
-          "Sin presión extrema",
-          "17° y 11°"
-        ]
-      ],
-      "note": "Cuota 3.30 fuera de 2.60–3.20. Levante 17° (7 pts) y Athletic Club 11° (9 pts). Empates 33% casa / 33% fuera. Goles 2.68. H2H sin dato.",
-      "alerts": "No cumple: Zona media (6-15), Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5.",
-      "big": []
+      "note": "Cuota 6.00 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
     },
     {
       "league": "usa",
@@ -395,13 +373,12 @@
       "odds": [
         [
           "DraftKings",
-          4.5
+          4.6
         ]
       ],
       "criteria": [],
-      "note": "Cuota 4.50 fuera de 2.60–3.20; no se analiza.",
-      "alerts": "",
-      "big": []
+      "note": "Cuota 4.60 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
     }
   ],
   "warnings": []
@@ -464,9 +441,6 @@ function pill(m){
   if (m.status === 'rejected'){
     return {cls:'pill-rejected', text: m.score != null ? `🔴 ${m.score}/8` : '🔴 Fuera'};
   }
-  if (m.status === 'excluded'){
-    return {cls:'pill-excluded', text:'⛔ Grande'};
-  }
   if (m.status === 'pending'){
     return {cls:'pill-pending', text:'⏳ Sin cuota'};
   }
@@ -493,12 +467,7 @@ function criteriaTable(criteria){
 
 function renderMatch(m){
   const p = pill(m);
-  const big = m.big && m.big.length
-    ? `<span class="tag-big">Equipo grande: ${esc(m.big.join(', '))}</span>` : '';
-  const showOdds = m.status !== 'excluded' || (m.odds && m.odds.length);
-  const meta = (showOdds || big)
-    ? `<div class="match-meta">${showOdds ? `<span class="odds">${oddsText(m)}</span>` : ''}${big}</div>`
-    : '';
+  const meta = `<div class="match-meta"><span class="odds">${oddsText(m)}</span></div>`;
   const note = m.note ? `<p class="note" title="${esc(m.note)}">${esc(m.note)}</p>` : '';
   const alerts = m.alerts ? `<p class="note alert" title="${esc(m.alerts)}">⚠️ ${esc(m.alerts)}</p>` : '';
   const crit = m.criteria && m.criteria.length
@@ -569,7 +538,7 @@ function renderStats(){
   $('sMatches').textContent = ms.length;
   $('sCandidates').textContent = ms.filter(m => m.status === 'candidate').length;
   $('sDiscarded').textContent = ms.filter(m =>
-    m.status === 'rejected' || m.status === 'excluded' || m.status === 'pending'
+    m.status === 'rejected' || m.status === 'pending'
   ).length;
   const filter = $('filterCandidates');
   filter.classList.toggle('active', state.onlyCandidates);
