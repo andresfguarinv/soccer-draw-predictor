@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-20",
+  "date_label": "Martes 20/10/2026",
+  "generated_at": "2026-10-20T15:42:00-05:00",
+  "cutoff": "15:42",
+  "source": "Datos manuales verificados",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "col",
+      "fixture_id": null,
+      "kickoff": "2026-10-20T16:30:00-05:00",
+      "time": "16:30",
+      "home": "Deportivo Pereira",
+      "away": "Boyacá Chicó",
+      "status": "candidate",
+      "score": 6,
+      "odds": [
+        [
+          "DraftKings",
+          3.0
+        ],
+        [
+          "bwin",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "18° y 16°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "10 vs 12"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "3/6 = 50%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/6 = 33%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.28 y 2.53 (≈2.5)"
+        ],
+        [
+          true,
+          "H2H: ≥ 2 empates últimos 5",
+          "2 empates"
+        ],
+        [
+          true,
+          "Sin goleador en forma",
+          "máx. 4 goles por jugador"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "Chicó 19° en descenso (0.890)"
+        ]
+      ],
+      "note": "Pereira es la peor ofensiva del torneo (8 goles en 13) y empata el 50% en casa. Chicó solo ha empatado 2 de 6 fuera, pero llega necesitado.",
+      "alerts": "Asimetría motivacional: Pereira está 18° en el Clausura y casi sin opciones; Chicó se juega la permanencia. Si aplicas el filtro de simetría, baja a 5/8.",
+      "big": []
+    },
+    {
+      "league": "col",
+      "fixture_id": null,
+      "kickoff": "2026-10-20T18:15:00-05:00",
+      "time": "18:15",
+      "home": "Internacional de Bogotá",
+      "away": "Fortaleza",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.3
+        ],
+        [
+          "Forebet (modelo)",
+          3.1
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "14° y 17°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "14 vs 11"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "3/7 = 43%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "5/6 = 83%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.83 y 2.56"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "1 empate"
+        ],
+        [
+          false,
+          "Sin goleador en forma",
+          "Arroyo: 9 goles en 19"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "Fortaleza 17°, pelea descenso"
+        ]
+      ],
+      "note": "El mejor dato de empates fuera de la liga (5/6), pero la cuota y el perfil de goles lo sacan del rango.",
+      "alerts": "",
+      "big": []
+    },
+    {
+      "league": "col",
+      "fixture_id": null,
+      "kickoff": "2026-10-20T18:30:00-05:00",
+      "time": "18:30",
+      "home": "Cúcuta Deportivo",
+      "away": "Atlético Nacional",
+      "status": "excluded",
+      "score": null,
+      "odds": [],
+      "criteria": [],
+      "note": "Filtro 1: Atlético Nacional es equipo grande. No se evalúa.",
+      "alerts": "",
+      "big": [
+        "Atlético Nacional"
+      ]
+    },
+    {
+      "league": "col",
+      "fixture_id": null,
+      "kickoff": "2026-10-20T20:30:00-05:00",
+      "time": "20:30",
+      "home": "Millonarios",
+      "away": "Once Caldas",
+      "status": "excluded",
+      "score": null,
+      "odds": [],
+      "criteria": [],
+      "note": "Filtro 1: Millonarios es equipo grande. H2H con 4 empates en 5, pero no se evalúa.",
+      "alerts": "",
+      "big": [
+        "Millonarios"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,67 @@
+name: Generar y publicar predicciones
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 05:05 UTC = 00:05 en America/Bogota
+    - cron: "5 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generar página del día
+        run: python3 generate_daily.py
+
+      - name: Preparar sitio estático
+        run: python3 prepare_site.py
+
+      - name: Guardar páginas generadas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html pages data docs
+          if git diff --cached --quiet; then
+            echo "Sin cambios para guardar."
+          else
+            git commit -m "chore: predicciones $(date -u +%F) [skip ci]"
+            git push
+          fi
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir artefacto del sitio
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

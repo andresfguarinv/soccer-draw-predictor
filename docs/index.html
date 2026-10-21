@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soccer Draw Predictor — Archivo</title>
+<style>
+  :root{
+    --bg:#0b0f14;--card:#121923;--line:rgba(255,255,255,.09);--text:#e8eef7;
+    --muted:#91a0b4;--yellow:#fbbf24;--green:#34d399;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:radial-gradient(900px 500px at 20% -10%,rgba(251,191,36,.10),transparent 60%),var(--bg);
+    color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;min-height:100vh;
+  }
+  main{max-width:860px;margin:0 auto;padding:48px 20px 64px}
+  .eyebrow{margin:0 0 10px;color:var(--yellow);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  h1{margin:0;font-size:clamp(30px,6vw,48px);letter-spacing:-.035em;line-height:1.05}
+  .sub{margin:14px 0 22px;color:var(--muted);max-width:650px}
+  .latest{
+    display:inline-block;margin-bottom:28px;padding:11px 16px;border-radius:999px;
+    color:#111;background:var(--yellow);font-weight:700;text-decoration:none;font-size:14px;
+  }
+  .latest:hover{filter:brightness(1.06)}
+  .list{display:grid;gap:12px}
+  .day{
+    display:block;padding:18px 18px 16px;border:1px solid var(--line);border-radius:16px;
+    background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+    color:inherit;text-decoration:none;transition:.15s;
+  }
+  .day:hover{border-color:rgba(251,191,36,.45);transform:translateY(-1px)}
+  .day-top{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .day-top strong{font-size:17px}
+  .day-top span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+  .day p{margin:8px 0 0;color:var(--muted);font-size:14px}
+  .empty{border:1px solid var(--line);border-radius:16px;padding:22px;color:var(--muted);background:var(--card)}
+  code{color:var(--yellow);font-size:.92em}
+  footer{margin-top:34px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:18px}
+  @media(max-width:560px){main{padding-top:32px}}
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Soccer Draw Predictor</p>
+  <h1>Archivo de predicciones</h1>
+  <p class="sub">Páginas diarias generadas con ESPN. Cada fecha conserva sus candidatos, cuotas y criterios. Confirma siempre la cuota final en Betplay.</p>
+  <a class="latest" href="pages/2026-10-21.html">Abrir la última fecha →</a>
+  <section class="list" aria-label="Fechas disponibles">
+    
+      <a class="day" href="pages/2026-10-21.html">
+        <div class="day-top">
+          <strong>Miércoles 21/10/2026</strong>
+          <span>4 partidos · 1 candidato</span>
+        </div>
+        <p>Levante vs Athletic Club · 5/8 · 3.20</p>
+      </a>
+
+      <a class="day" href="pages/2026-10-20.html">
+        <div class="day-top">
+          <strong>Martes 20/10/2026</strong>
+          <span>4 partidos · 1 candidato</span>
+        </div>
+        <p>Deportivo Pereira vs Boyacá Chicó · 6/8 · 2.95</p>
+      </a>
+  </section>
+  <footer>No es consejo de apuestas. Juego responsable, +18.</footer>
+</main>
+</body>
+</html>
