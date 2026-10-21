@@ -183,6 +183,12 @@ El repositorio incluye el workflow `.github/workflows/pages.yml`, que genera y p
    git push -u origin main
    ```
 
+   Si tienes GitHub CLI instalado y autenticado, puedes crear y subir el repositorio en un paso:
+
+   ```bash
+   gh repo create soccer-draw-predictor --public --source=. --remote=origin --push
+   ```
+
 3. En **Settings → Pages → Build and deployment**, elige **GitHub Actions** como fuente.
 4. Ejecuta el workflow una vez desde **Actions → Generar y publicar predicciones → Run workflow**.
 5. El sitio queda en `https://tuusuario.github.io/turepo/` y cada fecha en
