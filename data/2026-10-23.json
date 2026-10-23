@@ -1,0 +1,515 @@
+{
+  "date": "2026-10-23",
+  "date_label": "Viernes 23/10/2026",
+  "generated_at": "2026-10-23T04:47:00.368457-05:00",
+  "cutoff": "04:47",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "col",
+      "fixture_id": "401877907",
+      "kickoff": "2026-10-23T18:00:00-05:00",
+      "time": "18:00",
+      "home": "Boyacá Chicó",
+      "away": "Atlético Bucaramanga",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "17° y 5°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "12 vs 25"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/7 = 14%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/6 = 33%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.57 y 2.62 (prom. 2.59)"
+        ],
+        [
+          true,
+          "H2H: ≥ 2 empates últimos 5",
+          "2 empates en 5"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 0 y 12 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "17° y 5°"
+        ]
+      ],
+      "note": "Cuota 3.25 fuera de 2.60–3.20. Score 3/8. Boyacá Chicó 17° (12 pts) y Atlético Bucaramanga 5° (25 pts). Empates 14% casa / 33% fuera. Goles 2.59. H2H 2/5.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles)."
+    },
+    {
+      "league": "col",
+      "fixture_id": "401877773",
+      "kickoff": "2026-10-23T20:10:00-05:00",
+      "time": "20:10",
+      "home": "Atlético Junior",
+      "away": "Águilas Doradas",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.55
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.55 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "par",
+      "fixture_id": "401888575",
+      "kickoff": "2026-10-23T15:00:00-05:00",
+      "time": "15:00",
+      "home": "Rubio Ñú",
+      "away": "Guaraní",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.05
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "10° y 6°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "13 vs 22"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "4/7 = 57%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "4/7 = 57%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.67 y 2.00 (prom. 2.33)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "0 empates en 3"
+        ],
+        [
+          null,
+          "Sin goleador en forma (≥ 8 goles)",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "10° y 6° · descenso"
+        ]
+      ],
+      "note": "No alcanza 5/8 (4/8). Rubio Ñú 10° (13 pts) y Guaraní 6° (22 pts). Empates 57% casa / 57% fuera. Goles 2.33. H2H 0/3.",
+      "alerts": "No cumple: Diferencia de puntos ≤ 5, H2H: ≥ 2 empates últimos 5, Sin presión extrema. Sin verificar: Sin goleador en forma (≥ 8 goles). Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    },
+    {
+      "league": "par",
+      "fixture_id": "401888577",
+      "kickoff": "2026-10-23T17:30:00-05:00",
+      "time": "17:30",
+      "home": "Libertad",
+      "away": "Sportivo Luqueño",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.0
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.00 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899585",
+      "kickoff": "2026-10-23T13:30:00-05:00",
+      "time": "13:30",
+      "home": "Empoli",
+      "away": "Vicenza",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.35
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "14° y 17°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "7 vs 6"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/3 = 0%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/4 = 50%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.57 y 3.43 (prom. 3.00)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 2 y 2 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "14° y 17°"
+        ]
+      ],
+      "note": "Cuota 3.35 fuera de 2.60–3.20. Score 4/8. Empoli 14° (7 pts) y Vicenza 17° (6 pts). Empates 0% casa / 50% fuera. Goles 3.00. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883152",
+      "kickoff": "2026-10-23T13:30:00-05:00",
+      "time": "13:30",
+      "home": "Granada",
+      "away": "Real Valladolid",
+      "status": "candidate",
+      "score": 6,
+      "odds": [
+        [
+          "DraftKings",
+          3.2
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "7° y 13°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "17 vs 12"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "1/4 = 25%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "3/5 = 60%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.90 y 2.90 (prom. 2.90)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 4 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "7° y 13°"
+        ]
+      ],
+      "note": "Granada 7° (17 pts) y Real Valladolid 13° (12 pts). Empates 25% casa / 60% fuera. Goles 2.90. H2H sin dato.",
+      "alerts": "No cumple: Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "eng2",
+      "fixture_id": "401880207",
+      "kickoff": "2026-10-23T14:00:00-05:00",
+      "time": "14:00",
+      "home": "Bolton Wanderers",
+      "away": "Middlesbrough",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.4
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.40 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "ger2",
+      "fixture_id": "401885082",
+      "kickoff": "2026-10-23T11:30:00-05:00",
+      "time": "11:30",
+      "home": "SV Darmstadt 98",
+      "away": "St. Pauli",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.5
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.50 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "ger2",
+      "fixture_id": "401885079",
+      "kickoff": "2026-10-23T11:30:00-05:00",
+      "time": "11:30",
+      "home": "VfL Bochum",
+      "away": "VfL Wolfsburg",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.0
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.00 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401874957",
+      "kickoff": "2026-10-23T13:45:00-05:00",
+      "time": "13:45",
+      "home": "Torino",
+      "away": "Monza",
+      "status": "rejected",
+      "score": 5,
+      "odds": [
+        [
+          "DraftKings",
+          3.35
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "10° y 14°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "10 vs 7"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/3 = 0%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "1/4 = 25%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.71 y 4.00 (prom. 3.36)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 6 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "10° y 14°"
+        ]
+      ],
+      "note": "Cuota 3.35 fuera de 2.60–3.20. Torino 10° (10 pts) y Monza 14° (7 pts). Empates 0% casa / 25% fuera. Goles 3.36. H2H sin dato.",
+      "alerts": "No cumple: Empates del local en casa ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882836",
+      "kickoff": "2026-10-23T14:00:00-05:00",
+      "time": "14:00",
+      "home": "Alavés",
+      "away": "Málaga",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.85
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.85 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876428",
+      "kickoff": "2026-10-23T13:45:00-05:00",
+      "time": "13:45",
+      "home": "Brest",
+      "away": "Nice",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.5
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.50 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    }
+  ],
+  "warnings": []
+}
