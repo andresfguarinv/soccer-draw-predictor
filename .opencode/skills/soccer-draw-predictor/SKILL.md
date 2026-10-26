@@ -90,6 +90,7 @@ no incluye `data/`, `.env`, `.cache/` ni código Python.
 | `--include-started` | Solo para pruebas: incluye partidos ya iniciados. No usarlo para el HTML real. |
 | `--template`, `--out`, `--data-dir` | Personalizan la plantilla, el HTML de salida y el directorio de snapshots. |
 | `--archive-dir` | Directorio de las páginas fechadas (default: `pages`). |
+| `--experimental` | Activa el modo experimental: 10 criterios y umbral 7/10. Solo con ESPN. |
 
 Para una prueba que no sobrescriba el día real, usa `--out`, `--data-dir` y `--archive-dir` temporales.
 
@@ -189,6 +190,45 @@ Cuando una alerta cambie la recomendación, dilo explícitamente; no la escondas
 
 ---
 
+## Modo experimental (rama `experiment/backtest-forma-reciente`)
+
+`--experimental` agrega dos criterios y sube el umbral. No reemplaza el modo estable hasta que el backtest lo
+justifique.
+
+| # | Criterio | Descripción |
+|---|----------|-------------|
+| 9 | Empates recientes | Ambos equipos ≥ 2 empates en sus últimos 5 partidos terminados. |
+| 10 | Goles recientes ≤ 2.60 | Promedio de goles de esos últimos 5 partidos, sumando ambos equipos. |
+
+- Score sobre **10**; mínimo **7/10**.
+- Los criterios 9 y 10 son **obligatorios**: sin ambos, el partido no es candidato aunque llegue a 8/10.
+- La forma reciente usa solo partidos anteriores al kickoff; si faltan, se completa con la temporada anterior.
+- La UI muestra banner experimental, badge `x/10`, forma reciente por equipo y leyenda con umbrales de 10.
+- `--experimental` solo aplica a ESPN. Con `--source api-football` se ignora con aviso.
+
+### Backtest
+
+`backtest.py` reconstruye el histórico con cuotas de cierre de DraftKings desde
+`site.api.espn.com/.../summary?event=...` (el scoreboard histórico ya no trae cuotas). Evita look-ahead: cada partido
+usa solo partidos anteriores al kickoff, sin standings ni goleadores actuales.
+
+```bash
+python3 backtest.py --weeks 8
+python3 backtest.py --start 2026-08-31 --end 2026-10-25 --leagues col,esp2,ita
+```
+
+Salida en `reports/backtest-YYYY-MM-DD.md` y `.json`: reglas, acierto, IC95%, cuota media, ROI, resumen por semana y
+por liga. Es descriptivo, con muestra pequeña; no garantiza rendimiento futuro.
+
+El backtest **no valida el score completo de 10**: no reconstruye standings ni goleadores históricos. Valida las
+reglas que sí puede calcular sin look-ahead (forma reciente, goles, draw rates de temporada y cuotas).
+
+**Resultado (12 semanas, 03/08–25/10/2026):** base 31.7% (65/205, ROI −2.7%) vs regla experimental 18.2% (4/22,
+ROI −45.0%). No hay evidencia de mejora; el experimento no se promueve a `main` y `--experimental` se presenta como
+no validado.
+
+---
+
 ## Presentación y UI
 
 El HTML lo genera `generate_daily.py`; no reconstruyas las cards a mano ni agregues un panel grande de “candidato del
@@ -277,6 +317,8 @@ El plan free de API-Football no sirve para 2026: responde
 ## Archivos del proyecto
 
 - `generate_daily.py`: generador, scoring, filtros y fuente ESPN/API-Football.
+- `backtest.py`: backtest histórico con cuotas de cierre de ESPN.
+- `reports/backtest-YYYY-MM-DD.{md,json}`: resultados del backtest.
 - `index.html`: plantilla y última página generada.
 - `pages/YYYY-MM-DD.html`: página fechada de cada día generado.
 - `docs/`: sitio listo para publicar (solo HTML).

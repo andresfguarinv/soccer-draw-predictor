@@ -73,6 +73,13 @@ LEAGUES = [
 ]
 
 FINISHED_STATUS = {"FT", "AET", "PEN"}
+
+# Modo experimental: forma reciente y goles recientes.
+RECENT_N = 5
+RECENT_MIN_PLAYED = 4
+RECENT_GOALS_MAX = 2.60
+EXPERIMENTAL_MIN_SCORE = 7
+EXPERIMENTAL_STRONG_SCORE = 9
 MATCH_WINNER_NAMES = {"match winner", "1x2", "full time result"}
 DRAW_NAMES = {"draw", "x", "empate"}
 
@@ -764,6 +771,68 @@ def espn_schedule_stats(
     }
 
 
+def recent_form_stats(
+    events: list[dict[str, Any]],
+    team_id: str,
+    before_ts: float,
+    n: int = RECENT_N,
+) -> dict[str, Any]:
+    """Empates y goles de los últimos N partidos antes del kickoff.
+
+    No filtra por tipo de temporada: para el modo experimental interesa la
+    racha reciente, aunque parte de ella sea de la temporada anterior.
+    """
+    rows: list[tuple[float, float, float]] = []
+    seen: set[str] = set()
+
+    for event in events:
+        competitions = event.get("competitions") or []
+        if not competitions:
+            continue
+        competition = competitions[0]
+        state = ((competition.get("status") or {}).get("type") or {}).get("state")
+        if state != "post":
+            continue
+        try:
+            event_ts = parse_datetime(event.get("date")).timestamp()
+        except (TypeError, ValueError):
+            continue
+        if event_ts >= before_ts:
+            continue
+        event_id = str(event.get("id") or "")
+        if event_id and event_id in seen:
+            continue
+        competitors = competition.get("competitors") or []
+        me = next(
+            (c for c in competitors if str((c.get("team") or {}).get("id") or "") == team_id),
+            None,
+        )
+        opponent = next(
+            (c for c in competitors if str((c.get("team") or {}).get("id") or "") != team_id),
+            None,
+        )
+        if not me or not opponent:
+            continue
+        my_score = espn_score_value(me)
+        rival_score = espn_score_value(opponent)
+        if my_score is None or rival_score is None:
+            continue
+        if event_id:
+            seen.add(event_id)
+        rows.append((event_ts, my_score, rival_score))
+
+    rows.sort(key=lambda item: item[0], reverse=True)
+    last = rows[:n]
+    played = len(last)
+    draws = sum(1 for _, my_score, rival_score in last if my_score == rival_score)
+    goals_avg = (
+        sum(my_score + rival_score for _, my_score, rival_score in last) / played
+        if played
+        else None
+    )
+    return {"played": played, "draws": draws, "goals_avg": goals_avg}
+
+
 def espn_h2h(
     events: list[dict[str, Any]],
     home_id: str,
@@ -849,6 +918,7 @@ def build_data_from_espn(
     target_date: date,
     now: datetime,
     include_started: bool,
+    experimental: bool = False,
 ) -> dict[str, Any]:
     warnings: list[str] = []
     matches: list[dict[str, Any]] = []
@@ -943,6 +1013,29 @@ def build_data_from_espn(
                 away_schedule, away_id, season_type_name, kickoff.timestamp()
             )
 
+            home_recent = None
+            away_recent = None
+            if experimental:
+                home_recent_events = list(home_schedule)
+                home_recent = recent_form_stats(
+                    home_recent_events, home_id, kickoff.timestamp()
+                )
+                if home_recent["played"] < RECENT_N:
+                    home_recent_events.extend(get_schedule(home_id, season - 1))
+                    home_recent = recent_form_stats(
+                        home_recent_events, home_id, kickoff.timestamp()
+                    )
+
+                away_recent_events = list(away_schedule)
+                away_recent = recent_form_stats(
+                    away_recent_events, away_id, kickoff.timestamp()
+                )
+                if away_recent["played"] < RECENT_N:
+                    away_recent_events.extend(get_schedule(away_id, season - 1))
+                    away_recent = recent_form_stats(
+                        away_recent_events, away_id, kickoff.timestamp()
+                    )
+
             h2h_events = list(home_schedule)
             for year in (season - 1, season - 2):
                 h2h_events.extend(get_schedule(home_id, year))
@@ -962,6 +1055,9 @@ def build_data_from_espn(
                 scorers=scorers,
                 scorers_ok=scorers_ok,
                 kickoff=kickoff,
+                home_recent=home_recent,
+                away_recent=away_recent,
+                experimental=experimental,
             )
             matches.append(analyzed)
 
@@ -988,7 +1084,14 @@ def build_data_from_espn(
         "date_label": date_label(target_date),
         "generated_at": now.isoformat(),
         "cutoff": now.strftime("%H:%M"),
-        "source": "ESPN gratis (sin API key) + revisión manual",
+        "source": (
+            "ESPN gratis (sin API key) + revisión manual"
+            + (" · experimental" if experimental else "")
+        ),
+        "experimental": experimental,
+        "score_base": 10 if experimental else 8,
+        "candidate_min_score": EXPERIMENTAL_MIN_SCORE if experimental else 5,
+        "strong_min_score": EXPERIMENTAL_STRONG_SCORE if experimental else 7,
         "leagues": [public_league(league) for league in LEAGUES],
         "matches": matches,
         "warnings": warnings,
@@ -1027,6 +1130,9 @@ def analyze_fixture(
     scorers: dict[int, int],
     scorers_ok: bool,
     kickoff: datetime,
+    home_recent: dict[str, Any] | None = None,
+    away_recent: dict[str, Any] | None = None,
+    experimental: bool = False,
 ) -> dict[str, Any]:
     fixture = item.get("fixture") or {}
     teams = item.get("teams") or {}
@@ -1136,7 +1242,55 @@ def analyze_fixture(
     else:
         criteria.append([None, "Sin presión extrema", "sin dato"])
 
+    # 9 y 10. Confirmaciones del modo experimental.
+    recent_ok = False
+    if experimental:
+        home_recent = home_recent or {}
+        away_recent = away_recent or {}
+        home_played = as_int(home_recent.get("played")) or 0
+        away_played = as_int(away_recent.get("played")) or 0
+        home_draws = as_int(home_recent.get("draws")) or 0
+        away_draws = as_int(away_recent.get("draws")) or 0
+        recent_ok = (
+            home_played >= RECENT_MIN_PLAYED
+            and away_played >= RECENT_MIN_PLAYED
+        )
+        recent_both_ok = (
+            recent_ok
+            and home_draws >= 2
+            and away_draws >= 2
+        )
+        criteria.append([
+            recent_both_ok,
+            "Empates recientes: ambos ≥ 2 en últimos 5",
+            f"{home_draws}/{home_played} y {away_draws}/{away_played}",
+        ])
+
+        home_recent_goals = home_recent.get("goals_avg")
+        away_recent_goals = away_recent.get("goals_avg")
+        if home_recent_goals is not None and away_recent_goals is not None:
+            recent_goals_avg = (home_recent_goals + away_recent_goals) / 2
+            recent_goals_ok = recent_ok and recent_goals_avg <= RECENT_GOALS_MAX
+            criteria.append([
+                recent_goals_ok,
+                f"Goles recientes ≤ {RECENT_GOALS_MAX:.2f}",
+                f"{home_recent_goals:.2f} y {away_recent_goals:.2f} (prom. {recent_goals_avg:.2f})",
+            ])
+        else:
+            recent_goals_ok = False
+            recent_goals_avg = None
+            criteria.append([
+                None,
+                f"Goles recientes ≤ {RECENT_GOALS_MAX:.2f}",
+                "sin dato",
+            ])
+    else:
+        recent_both_ok = False
+        recent_goals_ok = False
+        recent_goals_avg = None
+
     score = sum(1 for ok, _, _ in criteria if ok is True)
+    max_score = len(criteria)
     missing = [label for ok, label, _ in criteria if ok is None]
     failed = [label for ok, label, _ in criteria if ok is False]
 
@@ -1162,21 +1316,30 @@ def analyze_fixture(
     valid_odds = [odd for _, odd in odds if 2.60 <= odd <= 3.20]
     best_odd = max((odd for _, odd in odds), default=None)
     display_odds = pick_display_odds(odds)
+    min_score = EXPERIMENTAL_MIN_SCORE if experimental else 5
+    experimental_gate_ok = (
+        (recent_both_ok and recent_goals_ok) if experimental else True
+    )
 
     prefixes: list[str] = []
     if not odds:
         status = "pending"
         note = "Sin cuota de empate disponible. Revisar Betplay antes de considerar el partido."
     elif valid_odds:
-        status = "candidate" if score >= 5 else "rejected"
-        if score < 5:
-            prefixes.append(f"No alcanza 5/8 ({score}/8).")
+        qualified = score >= min_score and experimental_gate_ok
+        status = "candidate" if qualified else "rejected"
+        if score < min_score:
+            prefixes.append(f"No alcanza {min_score}/{max_score} ({score}/{max_score}).")
+        elif experimental and not recent_both_ok:
+            prefixes.append("Sin confirmación de empates recientes.")
+        elif experimental and not recent_goals_ok:
+            prefixes.append("Sin confirmación de goles recientes.")
     else:
         status = "rejected"
         if best_odd is not None:
             prefixes.append(f"Cuota {best_odd:.2f} fuera de 2.60–3.20.")
-        if score < 5:
-            prefixes.append(f"Score {score}/8.")
+        if score < min_score:
+            prefixes.append(f"Score {score}/{max_score}.")
 
     if prefixes:
         note = " ".join(prefixes) + " " + note
@@ -1190,6 +1353,11 @@ def analyze_fixture(
         "away": away_name,
         "status": status,
         "score": score,
+        "score_base": max_score,
+        "experimental": experimental,
+        "recent": (
+            {"home": home_recent, "away": away_recent} if experimental else None
+        ),
         "odds": display_odds,
         "criteria": criteria,
         "note": note.strip(),
@@ -1421,6 +1589,10 @@ def build_data_from_api(client: ApiClient, target_date: date, now: datetime, inc
         "generated_at": now.isoformat(),
         "cutoff": now.strftime("%H:%M"),
         "source": "API-Football + revisión manual",
+        "experimental": False,
+        "score_base": 8,
+        "candidate_min_score": 5,
+        "strong_min_score": 7,
         "leagues": [public_league(league) for league in LEAGUES],
         "matches": matches,
         "warnings": warnings,
@@ -1436,6 +1608,10 @@ def load_from_json(path: Path) -> dict[str, Any]:
     data.setdefault("generated_at", "")
     data.setdefault("cutoff", "")
     data.setdefault("source", "Snapshot JSON")
+    data.setdefault("experimental", False)
+    data.setdefault("score_base", 8)
+    data.setdefault("candidate_min_score", 5)
+    data.setdefault("strong_min_score", 7)
     data.setdefault("warnings", [])
     return data
 
@@ -1477,6 +1653,11 @@ def main() -> int:
     parser.add_argument("--archive-dir", default="pages", help="Directorio para la copia fechada YYYY-MM-DD.html (default: pages).")
     parser.add_argument("--data-dir", default="data", help="Directorio para los snapshots JSON.")
     parser.add_argument("--from-json", help="Genera el HTML desde un snapshot JSON, sin llamar a la API.")
+    parser.add_argument(
+        "--experimental",
+        action="store_true",
+        help="Activa el modo experimental: 10 criterios (8 base + forma reciente) y umbral 7/10.",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Imprime el JSON y no escribe archivos.")
     parser.add_argument("--no-cache", action="store_true", help="Ignora la caché local.")
     parser.add_argument("--include-started", action="store_true", help="Incluye partidos ya iniciados (solo pruebas).")
@@ -1501,7 +1682,13 @@ def main() -> int:
         if args.source == "espn":
             client = EspnClient(no_cache=args.no_cache, verbose=args.verbose)
             try:
-                data = build_data_from_espn(client, target_date, now, args.include_started)
+                data = build_data_from_espn(
+                    client,
+                    target_date,
+                    now,
+                    args.include_started,
+                    experimental=args.experimental,
+                )
             except EspnError as exc:
                 print(f"Error de ESPN: {exc}", file=sys.stderr)
                 return 1
@@ -1517,6 +1704,12 @@ def main() -> int:
                     file=sys.stderr,
                 )
                 return 2
+            if args.experimental:
+                print(
+                    "El modo experimental solo está implementado para ESPN. "
+                    "Se ignorará --experimental con API-Football.",
+                    file=sys.stderr,
+                )
             client = ApiClient(api_key, no_cache=args.no_cache, verbose=args.verbose)
             try:
                 data = build_data_from_api(client, target_date, now, args.include_started)

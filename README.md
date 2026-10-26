@@ -49,6 +49,13 @@ python3 generate_daily.py --from-json data/2026-10-20.json
 
 # Simular una hora concreta para probar el filtro de partidos iniciados
 python3 generate_daily.py --date 2026-10-20 --now 2026-10-20T15:42:00-05:00
+
+# Modo experimental: 10 criterios (8 base + forma reciente) y umbral 7/10
+python3 generate_daily.py --date 2026-10-26 --experimental
+
+# Backtest histórico con cuotas de cierre de ESPN
+python3 backtest.py --weeks 8
+python3 backtest.py --start 2026-08-31 --end 2026-10-25 --leagues col,esp2,ita
 ```
 
 ## Fuente de datos
@@ -100,6 +107,40 @@ El score que se muestra es la **base de 8 criterios**. Los ajustes cualitativos 
 Si no hay ningún candidato, el HTML recomienda esperar.
 
 En la parte superior, la tarjeta **Candidatos** funciona como filtro: al hacer clic muestra solo los partidos candidatos; al volver a pulsarla, se quita el filtro.
+
+## Modo experimental y backtest
+
+`--experimental` agrega dos criterios de forma reciente al score base:
+
+9. Ambos equipos suman **≥ 2 empates en sus últimos 5 partidos**.
+10. El promedio de goles de esos últimos 5 partidos es **≤ 2.60**.
+
+En este modo el score pasa a ser sobre **10** y el mínimo sube a **7/10**. Además, los
+criterios 9 y 10 son obligatorios: un partido con 8/10 pero sin confirmación reciente no
+se marca como candidato. La página muestra un banner experimental, el badge `x/10`, la
+forma reciente de cada equipo y la leyenda con los umbrales de 10.
+
+La forma reciente se calcula solo con partidos terminados **antes del kickoff**. Si un
+equipo tiene menos de 5 partidos en la temporada, se completa con la temporada anterior.
+
+`backtest.py` reconstruye el histórico con las cuotas de cierre de DraftKings que ESPN
+conserva en `summary?event=...` (el scoreboard histórico ya no trae cuotas). Para evitar
+look-ahead, las features de cada partido usan únicamente partidos anteriores al kickoff:
+no consulta standings ni goleadores actuales. Por eso el backtest **no valida el score
+completo de 10**; valida las reglas de forma reciente, goles, draw rates de temporada y
+cuotas, que son las que se pueden reconstruir sin look-ahead. Escribe:
+
+- `reports/backtest-YYYY-MM-DD.md`: tabla de reglas, acierto, IC95%, cuota media y ROI,
+  más resumen por semana y por liga.
+- `reports/backtest-YYYY-MM-DD.json`: meta, resumen y detalle de cada partido.
+
+El backtest es descriptivo: mide reglas sobre una muestra pequeña, no garantiza el
+resultado futuro. Las cuotas son de cierre de ESPN/DraftKings, no de Betplay.
+
+**Resultado (12 semanas, 03/08–25/10/2026):** la base de tomar todas las cuotas válidas
+acertó **31.7%** (65/205, ROI −2.7%) y la regla experimental **18.2%** (4/22, ROI −45.0%).
+Ninguna variante de forma reciente superó la base. Por eso el experimento **no se promueve
+a `main`**; `--experimental` queda como herramienta de investigación, no como recomendación.
 
 ## Estado actual
 
@@ -200,6 +241,8 @@ El workflow también hace commit de `index.html`, `pages/`, `data/` y `docs/` pa
 - `prepare_site.py`: genera el archivo `docs/index.html` y copia las páginas fechadas.
 - `.github/workflows/pages.yml`: generación y despliegue diario en GitHub Pages.
 - `generate_daily.py`: generador.
+- `backtest.py`: backtest histórico con cuotas de cierre de ESPN.
+- `reports/backtest-YYYY-MM-DD.{md,json}`: resultados del backtest.
 - `data/YYYY-MM-DD.json`: snapshot de datos del día.
 - `data/2026-10-20-manual.json`: referencia manual verificada del 20/10/2026.
 - `.env`: opcional, solo para `--source api-football`.

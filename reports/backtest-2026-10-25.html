@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backtest — Soccer Draw Predictor</title>
+<style>
+  :root{
+    --bg:#070b14;--panel:#0d1524;--line:#1c2942;--text:#e8eefc;--muted:#93a4c2;
+    --accent:#4cc9f0;--violet:#a78bfa;--green:#34d399;--yellow:#fbbf24;--red:#f87171;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 15% -10%,rgba(76,201,240,.16),transparent 60%),
+    radial-gradient(900px 500px at 95% 0%,rgba(167,139,250,.13),transparent 55%),var(--bg);
+    color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:36px 20px 70px}
+  .brand{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  h1{font-size:clamp(30px,4.6vw,48px);letter-spacing:-.04em;margin:10px 0 6px;line-height:1.05}
+  .sub{color:var(--muted);font-size:14px;line-height:1.6;margin:0}
+  .banner{margin-top:16px;padding:11px 14px;border-radius:12px;font-size:12.5px;line-height:1.5;
+    border:1px solid rgba(167,139,250,.4);background:rgba(167,139,250,.12);color:#e4dcff}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0 8px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .card b{display:block;font-size:24px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .card span{color:var(--muted);font-size:11.5px;line-height:1.35;display:block;margin-top:2px}
+  h2{font-size:18px;margin:34px 0 10px;letter-spacing:-.01em}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;font-size:12.5px}
+  th,td{padding:9px 11px;text-align:left;border-top:1px solid var(--line);vertical-align:top}
+  th{background:#0a1220;color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;
+    position:sticky;top:0}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  tr.best td{background:rgba(76,201,240,.08)}
+  tr.positive td:last-child{color:var(--green)}
+  .tag{display:inline-block;margin-left:6px;padding:2px 6px;border-radius:999px;font-size:9.5px;
+    background:rgba(76,201,240,.16);color:var(--accent);border:1px solid rgba(76,201,240,.3)}
+  .note{color:var(--muted);font-size:11.5px;line-height:1.7;margin-top:10px}
+  footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);
+    font-size:11.5px;line-height:1.7}
+  footer b{color:#cbd5e1}
+  @media(max-width:760px){.cards{grid-template-columns:repeat(2,1fr)}table{font-size:11.5px}
+    th,td{padding:7px 8px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">⚽ Soccer Draw Predictor</div>
+  <h1>Backtest de efectividad</h1>
+  <p class="sub">Del <b>2026-08-03</b> al <b>2026-10-25</b>
+    (84 días) · 10 ligas ·
+    cuota de empate 2.60–3.20</p>
+  <div class="banner">🧪 <b>Documento de investigación.</b> Mide reglas sobre datos históricos y una muestra
+    pequeña. No es una recomendación de apuestas ni garantiza resultados futuros. Las cuotas son de cierre de
+    DraftKings vía ESPN, no de Betplay.</div>
+
+  <section class="cards">
+    <div class="card"><b>1069</b><span>partidos con cuota de empate</span></div>
+    <div class="card"><b>205</b><span>con cuota válida 2.60–3.20</span></div>
+    <div class="card"><b>65</b><span>empates reales (31.7%)</span></div>
+    <div class="card"><b>3.07</b><span>cuota media · break-even 32.6%</span></div>
+  </section>
+
+  <h2>Reglas evaluadas</h2>
+  <table>
+    <thead><tr><th>Regla</th><th class="num">n</th><th class="num">Empates</th>
+      <th class="num">Acierto</th><th class="num">IC95%</th><th class="num">Cuota</th>
+      <th class="num">ROI</th></tr></thead>
+    <tbody><tr class=""><td>Todas las cuotas válidas</td><td class="num">205</td><td class="num">65</td><td class="num">31.7%</td><td class="num">26–38%</td><td class="num">3.07</td><td class="num">-2.7%</td></tr><tr class=""><td>Forma reciente: ambos ≥2 empates</td><td class="num">30</td><td class="num">6</td><td class="num">20.0%</td><td class="num">10–37%</td><td class="num">3.09</td><td class="num">-38.7%</td></tr><tr class=""><td>Goles recientes ≤2.6</td><td class="num">105</td><td class="num">31</td><td class="num">29.5%</td><td class="num">22–39%</td><td class="num">3.04</td><td class="num">-10.0%</td></tr><tr class=""><td>Forma reciente + goles recientes</td><td class="num">22</td><td class="num">4</td><td class="num">18.2%</td><td class="num">7–39%</td><td class="num">3.08</td><td class="num">-45.0%</td></tr><tr class=""><td>Ambos draw rates de temporada ≥25%</td><td class="num">46</td><td class="num">13</td><td class="num">28.3%</td><td class="num">17–43%</td><td class="num">3.07</td><td class="num">-14.0%</td></tr><tr class=""><td>Goles de temporada ≤2.5</td><td class="num">94</td><td class="num">29</td><td class="num">30.9%</td><td class="num">22–41%</td><td class="num">3.06</td><td class="num">-5.6%</td></tr><tr class=""><td>Cuota de cierre más baja que la de apertura</td><td class="num">86</td><td class="num">26</td><td class="num">30.2%</td><td class="num">22–41%</td><td class="num">3.04</td><td class="num">-8.1%</td></tr><tr class=""><td>Forma reciente + goles de temporada</td><td class="num">21</td><td class="num">6</td><td class="num">28.6%</td><td class="num">14–50%</td><td class="num">3.09</td><td class="num">-12.4%</td></tr><tr class=""><td>Forma reciente + draw rates</td><td class="num">16</td><td class="num">4</td><td class="num">25.0%</td><td class="num">10–49%</td><td class="num">3.12</td><td class="num">-23.1%</td></tr><tr class=""><td>Forma + goles recientes + draw rates</td><td class="num">11</td><td class="num">2</td><td class="num">18.2%</td><td class="num">5–48%</td><td class="num">3.11</td><td class="num">-45.5%</td></tr><tr class=""><td>Forma + goles recientes + cuota bajó</td><td class="num">6</td><td class="num">1</td><td class="num">16.7%</td><td class="num">3–56%</td><td class="num">3.06</td><td class="num">-51.7%</td></tr><tr class=""><td>≥2 confirmaciones</td><td class="num">113</td><td class="num">30</td><td class="num">26.5%</td><td class="num">19–35%</td><td class="num">3.05</td><td class="num">-18.8%</td></tr><tr class=""><td>≥3 confirmaciones</td><td class="num">56</td><td class="num">16</td><td class="num">28.6%</td><td class="num">18–41%</td><td class="num">3.03</td><td class="num">-13.9%</td></tr><tr class=""><td>≥4 confirmaciones</td><td class="num">19</td><td class="num">5</td><td class="num">26.3%</td><td class="num">12–49%</td><td class="num">3.08</td><td class="num">-21.3%</td></tr></tbody>
+  </table>
+  <p class="note"><b>Ninguna regla superó el acierto de tomar todas las cuotas válidas</b> (31.7%). Con esta muestra, las reglas de forma reciente no mejoran la selección base. ROI con 1 unidad plana por partido. El IC95% es Wilson; con n pequeño es muy ancho,
+    así que diferencias de pocos puntos porcentuales no son concluyentes.</p>
+
+  <h2>Por semana</h2>
+  <table>
+    <thead><tr><th>Semana</th><th class="num">Cuota válida</th><th class="num">Empates</th>
+      <th class="num">Forma reciente n</th><th class="num">Acierto forma</th>
+      <th class="num">Conf. ≥2 n</th><th class="num">Acierto conf.</th></tr></thead>
+    <tbody><tr><td>2026-W32</td><td class="num">11</td><td class="num">2 (18.2%)</td><td class="num">2</td><td class="num">0.0%</td><td class="num">5</td><td class="num">0.0%</td></tr><tr><td>2026-W33</td><td class="num">9</td><td class="num">2 (22.2%)</td><td class="num">0</td><td class="num">—</td><td class="num">3</td><td class="num">0.0%</td></tr><tr><td>2026-W34</td><td class="num">27</td><td class="num">12 (44.4%)</td><td class="num">1</td><td class="num">0.0%</td><td class="num">9</td><td class="num">33.3%</td></tr><tr><td>2026-W35</td><td class="num">26</td><td class="num">9 (34.6%)</td><td class="num">3</td><td class="num">33.3%</td><td class="num">14</td><td class="num">42.9%</td></tr><tr><td>2026-W36</td><td class="num">25</td><td class="num">10 (40.0%)</td><td class="num">5</td><td class="num">20.0%</td><td class="num">18</td><td class="num">27.8%</td></tr><tr><td>2026-W37</td><td class="num">24</td><td class="num">7 (29.2%)</td><td class="num">2</td><td class="num">50.0%</td><td class="num">16</td><td class="num">37.5%</td></tr><tr><td>2026-W38</td><td class="num">22</td><td class="num">6 (27.3%)</td><td class="num">5</td><td class="num">0.0%</td><td class="num">14</td><td class="num">14.3%</td></tr><tr><td>2026-W39</td><td class="num">9</td><td class="num">2 (22.2%)</td><td class="num">3</td><td class="num">33.3%</td><td class="num">6</td><td class="num">33.3%</td></tr><tr><td>2026-W40</td><td class="num">7</td><td class="num">3 (42.9%)</td><td class="num">0</td><td class="num">—</td><td class="num">2</td><td class="num">0.0%</td></tr><tr><td>2026-W41</td><td class="num">13</td><td class="num">4 (30.8%)</td><td class="num">3</td><td class="num">33.3%</td><td class="num">7</td><td class="num">28.6%</td></tr><tr><td>2026-W42</td><td class="num">15</td><td class="num">4 (26.7%)</td><td class="num">3</td><td class="num">0.0%</td><td class="num">8</td><td class="num">12.5%</td></tr><tr><td>2026-W43</td><td class="num">17</td><td class="num">4 (23.5%)</td><td class="num">3</td><td class="num">33.3%</td><td class="num">11</td><td class="num">27.3%</td></tr></tbody>
+  </table>
+
+  <h2>Por liga</h2>
+  <table>
+    <thead><tr><th>Liga</th><th class="num">Cuota válida</th><th class="num">Empates</th>
+      <th class="num">Forma reciente n</th><th class="num">Acierto forma</th></tr></thead>
+    <tbody><tr><td>col</td><td class="num">53</td><td class="num">20 (37.7%)</td><td class="num">15</td><td class="num">33.3%</td></tr><tr><td>eng2</td><td class="num">1</td><td class="num">0 (0.0%)</td><td class="num">0</td><td class="num">—</td></tr><tr><td>esp</td><td class="num">20</td><td class="num">9 (45.0%)</td><td class="num">1</td><td class="num">0.0%</td></tr><tr><td>esp2</td><td class="num">35</td><td class="num">11 (31.4%)</td><td class="num">4</td><td class="num">0.0%</td></tr><tr><td>fra</td><td class="num">4</td><td class="num">1 (25.0%)</td><td class="num">3</td><td class="num">0.0%</td></tr><tr><td>ita</td><td class="num">27</td><td class="num">6 (22.2%)</td><td class="num">0</td><td class="num">—</td></tr><tr><td>itb</td><td class="num">33</td><td class="num">9 (27.3%)</td><td class="num">3</td><td class="num">0.0%</td></tr><tr><td>par</td><td class="num">32</td><td class="num">9 (28.1%)</td><td class="num">4</td><td class="num">25.0%</td></tr></tbody>
+  </table>
+
+  <footer>
+    <b>Metodología.</b> Cuotas de cierre de DraftKings publicadas por ESPN
+    (<code>summary?event=…</code>); el scoreboard histórico ya no conserva cuotas.
+    Las features de cada partido usan solo partidos terminados antes del kickoff, sin standings ni goleadores
+    actuales. La forma reciente son los últimos 5 partidos; si faltan, se completa con la temporada anterior.
+    Los partidos sin cuota de empate se excluyen del denominador.
+    <br><br>
+    <b>Aviso.</b> No es consejo de apuestas. Confirma la cuota final en Betplay. Juego responsable, +18.
+  </footer>
+</div>
+</body>
+</html>
