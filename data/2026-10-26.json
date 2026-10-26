@@ -1,0 +1,341 @@
+{
+  "date": "2026-10-26",
+  "date_label": "Lunes 26/10/2026",
+  "generated_at": "2026-10-26T05:49:29.631070-05:00",
+  "cutoff": "05:49",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "col",
+      "fixture_id": "401878065",
+      "kickoff": "2026-10-26T18:00:00-05:00",
+      "time": "18:00",
+      "home": "Jaguares de Córdoba",
+      "away": "Llaneros",
+      "status": "rejected",
+      "score": 2,
+      "odds": [
+        [
+          "DraftKings",
+          3.15
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "20° y 14°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "10 vs 17"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "3/7 = 43%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/7 = 29%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.14 y 2.40 (prom. 2.77)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 11 y 6 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "20° y 14° · descenso"
+        ]
+      ],
+      "note": "No alcanza 5/8 (2/8). Jaguares de Córdoba 20° (10 pts) y Llaneros 14° (17 pts). Empates 43% casa / 29% fuera. Goles 2.77. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles), Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5. Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    },
+    {
+      "league": "col",
+      "fixture_id": "401877841",
+      "kickoff": "2026-10-26T20:05:00-05:00",
+      "time": "20:05",
+      "home": "Independiente Santa Fe",
+      "away": "Atlético Bucaramanga",
+      "status": "rejected",
+      "score": 6,
+      "odds": [
+        [
+          "DraftKings",
+          3.3
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "6° y 5°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "25 vs 25"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "3/8 = 38%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/7 = 29%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.50 y 2.50 (prom. 2.50)"
+        ],
+        [
+          true,
+          "H2H: ≥ 2 empates últimos 5",
+          "2 empates en 5"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 14 y 12 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "6° y 5°"
+        ]
+      ],
+      "note": "Cuota 3.30 fuera de 2.60–3.20. Independiente Santa Fe 6° (25 pts) y Atlético Bucaramanga 5° (25 pts). Empates 38% casa / 29% fuera. Goles 2.50. H2H 2/5.",
+      "alerts": "No cumple: Zona media (6-15), Sin goleador en forma (≥ 8 goles)."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883131",
+      "kickoff": "2026-10-26T14:30:00-05:00",
+      "time": "14:30",
+      "home": "FC Andorra",
+      "away": "Burgos",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "19° y 9°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "10 vs 17"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/5 = 0%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "1/4 = 25%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.00 y 2.30 (prom. 2.65)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 4 y 3 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "19° y 9°"
+        ]
+      ],
+      "note": "Cuota 3.25 fuera de 2.60–3.20. Score 3/8. FC Andorra 19° (10 pts) y Burgos 9° (17 pts). Empates 0% casa / 25% fuera. Goles 2.65. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882828",
+      "kickoff": "2026-10-26T15:00:00-05:00",
+      "time": "15:00",
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.4
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "6° y 12°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "14 vs 11"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/4 = 0%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/4 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.33 y 3.11 (prom. 3.22)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "1 empates en 4"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 2 y 7 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "6° y 12°"
+        ]
+      ],
+      "note": "Cuota 3.40 fuera de 2.60–3.20. Score 4/8. Sevilla 6° (14 pts) y Osasuna 12° (11 pts). Empates 0% casa / 0% fuera. Goles 3.22. H2H 1/4.",
+      "alerts": "No cumple: Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876422",
+      "kickoff": "2026-10-26T14:30:00-05:00",
+      "time": "14:30",
+      "home": "Paris Saint-Germain",
+      "away": "Lyon",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          5.75
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 5.75 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    }
+  ],
+  "warnings": []
+}
