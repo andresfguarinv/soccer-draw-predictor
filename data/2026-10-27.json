@@ -1,0 +1,597 @@
+{
+  "date": "2026-10-27",
+  "date_label": "Martes 27/10/2026",
+  "generated_at": "2026-10-27T05:15:30.845074-05:00",
+  "cutoff": "05:15",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "col",
+      "fixture_id": "401877953",
+      "kickoff": "2026-10-27T18:00:00-05:00",
+      "time": "18:00",
+      "home": "Cúcuta Deportivo",
+      "away": "Águilas Doradas",
+      "status": "candidate",
+      "score": 5,
+      "odds": [
+        [
+          "DraftKings",
+          2.9
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "9° y 11°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "21 vs 19"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/7 = 29%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "3/8 = 38%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.67 y 2.60 (prom. 2.63)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 10 y 11 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "9° y 11°"
+        ]
+      ],
+      "note": "Cúcuta Deportivo 9° (21 pts) y Águilas Doradas 11° (19 pts). Empates 29% casa / 38% fuera. Goles 2.63. H2H sin dato.",
+      "alerts": "No cumple: Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles). Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "col",
+      "fixture_id": "401877861",
+      "kickoff": "2026-10-27T20:05:00-05:00",
+      "time": "20:05",
+      "home": "Boyacá Chicó",
+      "away": "Atlético Junior",
+      "status": "rejected",
+      "score": 2,
+      "odds": [
+        [
+          "DraftKings",
+          3.2
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "16° y 15°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "15 vs 15"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/8 = 12%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/7 = 14%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.47 y 2.87 (prom. 2.67)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "1 empates en 5"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 0 y 16 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "16° y 15°"
+        ]
+      ],
+      "note": "No alcanza 5/8 (2/8). Boyacá Chicó 16° (15 pts) y Atlético Junior 15° (15 pts). Empates 12% casa / 14% fuera. Goles 2.67. H2H 1/5.",
+      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, H2H: ≥ 2 empates últimos 5, Sin goleador en forma (≥ 8 goles)."
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899578",
+      "kickoff": "2026-10-27T13:00:00-05:00",
+      "time": "13:00",
+      "home": "Benevento",
+      "away": "Catanzaro",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.1
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.10 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899579",
+      "kickoff": "2026-10-27T14:00:00-05:00",
+      "time": "14:00",
+      "home": "Ascoli",
+      "away": "Sampdoria",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "4° y 19°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "15 vs 5"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/4 = 50%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/5 = 40%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.50 y 3.00 (prom. 2.75)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 3 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "4° y 19° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.25 fuera de 2.60–3.20. Score 3/8. Ascoli 4° (15 pts) y Sampdoria 19° (5 pts). Empates 50% casa / 40% fuera. Goles 2.75. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Promedio de goles ≤ 2.5, Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899576",
+      "kickoff": "2026-10-27T14:00:00-05:00",
+      "time": "14:00",
+      "home": "Cesena",
+      "away": "Empoli",
+      "status": "rejected",
+      "score": 6,
+      "odds": [
+        [
+          "DraftKings",
+          3.3
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "15° y 17°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "8 vs 7"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "4/4 = 100%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "1/4 = 25%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.50 y 2.50 (prom. 2.50)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 6 y 2 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "15° y 17°"
+        ]
+      ],
+      "note": "Cuota 3.30 fuera de 2.60–3.20. Cesena 15° (8 pts) y Empoli 17° (7 pts). Empates 100% casa / 25% fuera. Goles 2.50. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15). Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899573",
+      "kickoff": "2026-10-27T14:00:00-05:00",
+      "time": "14:00",
+      "home": "Mantova",
+      "away": "Cremonese",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.35
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "2° y 18°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "17 vs 6"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "1/4 = 25%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/4 = 50%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.75 y 2.12 (prom. 2.44)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 5 y 3 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "2° y 18° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.35 fuera de 2.60–3.20. Score 4/8. Mantova 2° (17 pts) y Cremonese 18° (6 pts). Empates 25% casa / 50% fuera. Goles 2.44. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899572",
+      "kickoff": "2026-10-27T14:00:00-05:00",
+      "time": "14:00",
+      "home": "Padova",
+      "away": "Sudtirol",
+      "status": "rejected",
+      "score": 7,
+      "odds": [
+        [
+          "DraftKings",
+          3.15
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "9° y 7°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "10 vs 13"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "1/4 = 25%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "1/3 = 33%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.12 y 2.12 (prom. 2.12)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 0 y 2 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "9° y 7°"
+        ]
+      ],
+      "note": "Misma hora que Virtus Entella vs US Avellino; se prioriza el de mayor puntaje. Padova 9° (10 pts) y Sudtirol 7° (13 pts). Empates 25% casa / 33% fuera. Goles 2.12. H2H sin dato.",
+      "alerts": "Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899574",
+      "kickoff": "2026-10-27T14:00:00-05:00",
+      "time": "14:00",
+      "home": "Vicenza",
+      "away": "Modena",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.5
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.50 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899570",
+      "kickoff": "2026-10-27T14:00:00-05:00",
+      "time": "14:00",
+      "home": "Virtus Entella",
+      "away": "US Avellino",
+      "status": "candidate",
+      "score": 7,
+      "odds": [
+        [
+          "DraftKings",
+          3.2
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "12° y 8°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "9 vs 11"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/4 = 50%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "1/3 = 33%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.38 y 2.62 (prom. 2.50)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 2 y 4 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "12° y 8°"
+        ]
+      ],
+      "note": "Virtus Entella 12° (9 pts) y US Avellino 8° (11 pts). Empates 50% casa / 33% fuera. Goles 2.50. H2H sin dato.",
+      "alerts": "Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401874980",
+      "kickoff": "2026-10-27T12:30:00-05:00",
+      "time": "12:30",
+      "home": "Sassuolo",
+      "away": "Lazio",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.5
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.50 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401874780",
+      "kickoff": "2026-10-27T14:45:00-05:00",
+      "time": "14:45",
+      "home": "AS Roma",
+      "away": "Cagliari",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          5.0
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 5.00 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401874786",
+      "kickoff": "2026-10-27T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Torino",
+      "away": "Como",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.7
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.70 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    }
+  ],
+  "warnings": []
+}
