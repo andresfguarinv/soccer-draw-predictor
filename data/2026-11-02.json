@@ -1,0 +1,458 @@
+{
+  "date": "2026-11-02",
+  "date_label": "Lunes 02/11/2026",
+  "generated_at": "2026-11-02T08:13:57.771323-05:00",
+  "cutoff": "08:13",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "col",
+      "fixture_id": "401877772",
+      "kickoff": "2026-11-02T16:05:00-05:00",
+      "time": "16:05",
+      "home": "Águilas Doradas",
+      "away": "Fortaleza",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.4
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "9° y 19°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "22 vs 12"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "4/7 = 57%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "5/8 = 62%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.56 y 2.56 (prom. 2.56)"
+        ],
+        [
+          true,
+          "H2H: ≥ 2 empates últimos 5",
+          "2 empates en 5"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 11 y 9 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "9° y 19° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.40 fuera de 2.60–3.20. Score 3/8. Águilas Doradas 9° (22 pts) y Fortaleza 19° (12 pts). Empates 57% casa / 62% fuera. Goles 2.56. H2H 2/5.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles), Sin presión extrema."
+    },
+    {
+      "league": "col",
+      "fixture_id": "401877914",
+      "kickoff": "2026-11-02T20:15:00-05:00",
+      "time": "20:15",
+      "home": "Atlético Bucaramanga",
+      "away": "Atlético Nacional",
+      "status": "rejected",
+      "score": 1,
+      "odds": [
+        [
+          "DraftKings",
+          3.15
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "4° y 1°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "28 vs 35"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "5/8 = 62%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/8 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.56 y 2.81 (prom. 2.69)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "1 empates en 5"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 14 y 14 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "4° y 1° · título"
+        ]
+      ],
+      "note": "No alcanza 5/8 (1/8). Atlético Bucaramanga 4° (28 pts) y Atlético Nacional 1° (35 pts). Empates 62% casa / 0% fuera. Goles 2.69. H2H 1/5.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, H2H: ≥ 2 empates últimos 5, Sin goleador en forma (≥ 8 goles), Sin presión extrema."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883146",
+      "kickoff": "2026-11-02T10:15:00-05:00",
+      "time": "10:15",
+      "home": "Real Oviedo",
+      "away": "Las Palmas",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.85
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.85 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883123",
+      "kickoff": "2026-11-02T12:30:00-05:00",
+      "time": "12:30",
+      "home": "Real Valladolid",
+      "away": "Leganés",
+      "status": "rejected",
+      "score": 5,
+      "odds": [
+        [
+          "DraftKings",
+          3.4
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "16° y 17°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "12 vs 12"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/5 = 0%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/6 = 33%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.91 y 2.09 (prom. 2.50)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 4 y 2 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "16° y 17°"
+        ]
+      ],
+      "note": "Cuota 3.40 fuera de 2.60–3.20. Real Valladolid 16° (12 pts) y Leganés 17° (12 pts). Empates 0% casa / 33% fuera. Goles 2.50. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883147",
+      "kickoff": "2026-11-02T15:00:00-05:00",
+      "time": "15:00",
+      "home": "Mallorca",
+      "away": "Cádiz",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.3
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.30 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401874963",
+      "kickoff": "2026-11-02T12:30:00-05:00",
+      "time": "12:30",
+      "home": "Sassuolo",
+      "away": "Fiorentina",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.55
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.55 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401874971",
+      "kickoff": "2026-11-02T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Atalanta",
+      "away": "Parma",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.3
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.30 fuera de 2.60–3.20; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882824",
+      "kickoff": "2026-11-02T15:00:00-05:00",
+      "time": "15:00",
+      "home": "Deportivo",
+      "away": "Osasuna",
+      "status": "rejected",
+      "score": 5,
+      "odds": [
+        [
+          "DraftKings",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "13° y 15°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "11 vs 11"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "3/5 = 60%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/5 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.60 y 3.00 (prom. 2.80)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 5 y 7 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "13° y 15°"
+        ]
+      ],
+      "note": "Cuota 3.25 fuera de 2.60–3.20. Deportivo 13° (11 pts) y Osasuna 15° (11 pts). Empates 60% casa / 0% fuera. Goles 2.80. H2H sin dato.",
+      "alerts": "No cumple: Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876419",
+      "kickoff": "2026-11-02T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Lorient",
+      "away": "Brest",
+      "status": "rejected",
+      "score": 7,
+      "odds": [
+        [
+          "DraftKings",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "10° y 14°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "12 vs 9"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "1/4 = 25%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/4 = 50%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "1.62 y 3.25 (prom. 2.44)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 0 y 4 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "10° y 14°"
+        ]
+      ],
+      "note": "Cuota 3.25 fuera de 2.60–3.20. Lorient 10° (12 pts) y Brest 14° (9 pts). Empates 25% casa / 50% fuera. Goles 2.44. H2H sin dato.",
+      "alerts": "Sin verificar: H2H: ≥ 2 empates últimos 5."
+    }
+  ],
+  "warnings": []
+}
