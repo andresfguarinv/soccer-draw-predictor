@@ -1,8 +1,8 @@
 {
   "date": "2026-11-02",
   "date_label": "Lunes 02/11/2026",
-  "generated_at": "2026-11-02T12:28:54.216159-05:00",
-  "cutoff": "12:28",
+  "generated_at": "2026-11-02T12:41:27.699003-05:00",
+  "cutoff": "12:41",
   "source": "ESPN gratis (sin API key) + revisión manual",
   "leagues": [
     {
@@ -199,66 +199,6 @@
     },
     {
       "league": "esp2",
-      "fixture_id": "401883123",
-      "kickoff": "2026-11-02T12:30:00-05:00",
-      "time": "12:30",
-      "home": "Real Valladolid",
-      "away": "Leganés",
-      "status": "rejected",
-      "score": 5,
-      "odds": [
-        [
-          "DraftKings",
-          3.55
-        ]
-      ],
-      "criteria": [
-        [
-          false,
-          "Zona media (6-15)",
-          "16° y 17°"
-        ],
-        [
-          true,
-          "Diferencia de puntos ≤ 5",
-          "12 vs 12"
-        ],
-        [
-          false,
-          "Empates del local en casa ≥ 25%",
-          "0/5 = 0%"
-        ],
-        [
-          true,
-          "Empates del visitante fuera ≥ 25%",
-          "2/6 = 33%"
-        ],
-        [
-          true,
-          "Promedio de goles ≤ 2.5",
-          "2.91 y 2.09 (prom. 2.50)"
-        ],
-        [
-          null,
-          "H2H: ≥ 2 empates últimos 5",
-          "sin dato"
-        ],
-        [
-          true,
-          "Sin goleador en forma (≥ 8 goles)",
-          "máx. 4 y 2 goles"
-        ],
-        [
-          true,
-          "Sin presión extrema",
-          "16° y 17°"
-        ]
-      ],
-      "note": "Cuota 3.55 fuera de 2.60–3.40. Real Valladolid 16° (12 pts) y Leganés 17° (12 pts). Empates 0% casa / 33% fuera. Goles 2.50. H2H sin dato.",
-      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%. Sin verificar: H2H: ≥ 2 empates últimos 5."
-    },
-    {
-      "league": "esp2",
       "fixture_id": "401883147",
       "kickoff": "2026-11-02T15:00:00-05:00",
       "time": "15:00",
@@ -269,72 +209,12 @@
       "odds": [
         [
           "DraftKings",
-          4.2
+          4.3
         ]
       ],
       "criteria": [],
-      "note": "Cuota 4.20 fuera de 2.60–3.40; no se analiza.",
+      "note": "Cuota 4.30 fuera de 2.60–3.40; no se analiza.",
       "alerts": ""
-    },
-    {
-      "league": "ita",
-      "fixture_id": "401874963",
-      "kickoff": "2026-11-02T12:30:00-05:00",
-      "time": "12:30",
-      "home": "Sassuolo",
-      "away": "Fiorentina",
-      "status": "rejected",
-      "score": 4,
-      "odds": [
-        [
-          "DraftKings",
-          3.5
-        ]
-      ],
-      "criteria": [
-        [
-          false,
-          "Zona media (6-15)",
-          "15° y 17°"
-        ],
-        [
-          true,
-          "Diferencia de puntos ≤ 5",
-          "8 vs 5"
-        ],
-        [
-          true,
-          "Empates del local en casa ≥ 25%",
-          "1/4 = 25%"
-        ],
-        [
-          false,
-          "Empates del visitante fuera ≥ 25%",
-          "0/4 = 0%"
-        ],
-        [
-          false,
-          "Promedio de goles ≤ 2.5",
-          "4.00 y 3.56 (prom. 3.78)"
-        ],
-        [
-          null,
-          "H2H: ≥ 2 empates últimos 5",
-          "sin dato"
-        ],
-        [
-          true,
-          "Sin goleador en forma (≥ 8 goles)",
-          "máx. 3 y 3 goles"
-        ],
-        [
-          true,
-          "Sin presión extrema",
-          "15° y 17°"
-        ]
-      ],
-      "note": "Cuota 3.50 fuera de 2.60–3.40. Score 4/8. Sassuolo 15° (8 pts) y Fiorentina 17° (5 pts). Empates 25% casa / 0% fuera. Goles 3.78. H2H sin dato.",
-      "alerts": "No cumple: Zona media (6-15), Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
     },
     {
       "league": "ita",

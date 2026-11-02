@@ -50,6 +50,10 @@
   button.stat.active{border-color:rgba(251,191,36,.55);background:linear-gradient(180deg,rgba(251,191,36,.14),rgba(251,191,36,.03));box-shadow:inset 0 0 0 1px rgba(251,191,36,.12)}
   button.stat.active b{color:var(--yellow)}
   button.stat:focus-visible{outline:2px solid rgba(251,191,36,.55);outline-offset:2px}
+  button.stat.stat-high:hover{border-color:rgba(52,211,153,.35);background:linear-gradient(180deg,rgba(52,211,153,.09),rgba(255,255,255,.02))}
+  button.stat.stat-high.active{border-color:rgba(52,211,153,.55);background:linear-gradient(180deg,rgba(52,211,153,.14),rgba(52,211,153,.03));box-shadow:inset 0 0 0 1px rgba(52,211,153,.12)}
+  button.stat.stat-high.active b{color:var(--green)}
+  button.stat.stat-high:focus-visible{outline:2px solid rgba(52,211,153,.55);outline-offset:2px}
   .empty-state{grid-column:1/-1;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.02);padding:28px;text-align:center;color:var(--muted);font-size:13px;line-height:1.5}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 8px}
   .chip{border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted);padding:8px 12px;border-radius:999px;cursor:pointer;font-size:12.5px;transition:.15s}
@@ -80,6 +84,7 @@
   .match{padding:9px 10px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02);transition:.15s;min-width:0}
   .match:hover{background:rgba(255,255,255,.035)}
   .match.candidate{background:linear-gradient(90deg,rgba(251,191,36,.1),rgba(251,191,36,.02));border-color:rgba(251,191,36,.25);box-shadow:inset 3px 0 0 var(--yellow)}
+  .match.candidate.high{background:linear-gradient(90deg,rgba(52,211,153,.12),rgba(52,211,153,.02));border-color:rgba(52,211,153,.38);box-shadow:inset 3px 0 0 var(--green)}
   .match.pending{opacity:.85}
   .match-head{display:flex;align-items:center;gap:7px}
   .time{font-variant-numeric:tabular-nums;font-weight:800;color:var(--accent);font-size:12px;min-width:40px}
@@ -87,6 +92,7 @@
   .teams .vs{color:var(--muted);font-size:9.5px;margin:0 4px;text-transform:uppercase;letter-spacing:.06em}
   .pill{font-size:10px;font-weight:800;padding:4px 7px;border-radius:999px;white-space:nowrap;letter-spacing:.02em}
   .pill-candidate{background:rgba(251,191,36,.15);color:var(--yellow);border:1px solid rgba(251,191,36,.3)}
+  .pill-high{background:rgba(52,211,153,.15);color:var(--green);border:1px solid rgba(52,211,153,.35)}
   .pill-rejected{background:rgba(248,113,113,.12);color:var(--red);border:1px solid rgba(248,113,113,.28)}
   .pill-pending{background:rgba(148,163,184,.1);color:#cbd5e1;border:1px solid rgba(148,163,184,.25)}
   .match-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;font-size:10.5px;color:var(--muted);line-height:1.35}
@@ -152,10 +158,12 @@
   <section class="stats" aria-label="Resumen del día">
     <div class="stat"><b id="sLeagues">10</b><span>ligas visibles</span></div>
     <div class="stat"><b id="sMatches">4</b><span>partidos hoy</span></div>
-    <button class="stat stat-filter" id="filterCandidates" type="button" aria-pressed="false" title="Mostrar solo candidatos">
-      <b id="sCandidates">1</b><span id="sCandidatesLabel">candidatos</span>
+    <button class="stat stat-filter stat-high" id="filterHigh" type="button" aria-pressed="false" title="Mostrar solo candidatos de calificación alta">
+      <b id="sHigh">0</b><span>candidatos · alta</span>
     </button>
-    <div class="stat"><b id="sDiscarded">3</b><span>descartados</span></div>
+    <button class="stat stat-filter stat-medium" id="filterMedium" type="button" aria-pressed="false" title="Mostrar solo candidatos de calificación media">
+      <b id="sMedium">0</b><span>candidatos · media</span>
+    </button>
   </section>
 
   <nav class="chips" id="chips" aria-label="Ligas"></nav>
@@ -180,8 +188,8 @@
         El score es la base de 8 criterios;
         los ajustes cualitativos (simetría, altura, copa, expulsiones) aparecen como alertas para revisión.
         <div class="legend">
-          <span><i class="dot d-g"></i> Alta (7-8)</span>
-          <span><i class="dot d-y"></i> Media (5-6)</span>
+          <span><i class="dot d-g"></i> Alta (7-8) · borde verde</span>
+          <span><i class="dot d-y"></i> Media (5-6) · borde amarillo</span>
           <span><i class="dot d-r"></i> Baja (&lt;5)</span>
           <span><i class="dot d-b"></i> Sin analizar</span>
         </div>
@@ -206,8 +214,8 @@
 {
   "date": "2026-11-02",
   "date_label": "Lunes 02/11/2026",
-  "generated_at": "2026-11-02T12:28:54.216159-05:00",
-  "cutoff": "12:28",
+  "generated_at": "2026-11-02T12:41:27.699003-05:00",
+  "cutoff": "12:41",
   "source": "ESPN gratis (sin API key) + revisión manual",
   "leagues": [
     {
@@ -404,66 +412,6 @@
     },
     {
       "league": "esp2",
-      "fixture_id": "401883123",
-      "kickoff": "2026-11-02T12:30:00-05:00",
-      "time": "12:30",
-      "home": "Real Valladolid",
-      "away": "Leganés",
-      "status": "rejected",
-      "score": 5,
-      "odds": [
-        [
-          "DraftKings",
-          3.55
-        ]
-      ],
-      "criteria": [
-        [
-          false,
-          "Zona media (6-15)",
-          "16° y 17°"
-        ],
-        [
-          true,
-          "Diferencia de puntos ≤ 5",
-          "12 vs 12"
-        ],
-        [
-          false,
-          "Empates del local en casa ≥ 25%",
-          "0/5 = 0%"
-        ],
-        [
-          true,
-          "Empates del visitante fuera ≥ 25%",
-          "2/6 = 33%"
-        ],
-        [
-          true,
-          "Promedio de goles ≤ 2.5",
-          "2.91 y 2.09 (prom. 2.50)"
-        ],
-        [
-          null,
-          "H2H: ≥ 2 empates últimos 5",
-          "sin dato"
-        ],
-        [
-          true,
-          "Sin goleador en forma (≥ 8 goles)",
-          "máx. 4 y 2 goles"
-        ],
-        [
-          true,
-          "Sin presión extrema",
-          "16° y 17°"
-        ]
-      ],
-      "note": "Cuota 3.55 fuera de 2.60–3.40. Real Valladolid 16° (12 pts) y Leganés 17° (12 pts). Empates 0% casa / 33% fuera. Goles 2.50. H2H sin dato.",
-      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%. Sin verificar: H2H: ≥ 2 empates últimos 5."
-    },
-    {
-      "league": "esp2",
       "fixture_id": "401883147",
       "kickoff": "2026-11-02T15:00:00-05:00",
       "time": "15:00",
@@ -474,72 +422,12 @@
       "odds": [
         [
           "DraftKings",
-          4.2
+          4.3
         ]
       ],
       "criteria": [],
-      "note": "Cuota 4.20 fuera de 2.60–3.40; no se analiza.",
+      "note": "Cuota 4.30 fuera de 2.60–3.40; no se analiza.",
       "alerts": ""
-    },
-    {
-      "league": "ita",
-      "fixture_id": "401874963",
-      "kickoff": "2026-11-02T12:30:00-05:00",
-      "time": "12:30",
-      "home": "Sassuolo",
-      "away": "Fiorentina",
-      "status": "rejected",
-      "score": 4,
-      "odds": [
-        [
-          "DraftKings",
-          3.5
-        ]
-      ],
-      "criteria": [
-        [
-          false,
-          "Zona media (6-15)",
-          "15° y 17°"
-        ],
-        [
-          true,
-          "Diferencia de puntos ≤ 5",
-          "8 vs 5"
-        ],
-        [
-          true,
-          "Empates del local en casa ≥ 25%",
-          "1/4 = 25%"
-        ],
-        [
-          false,
-          "Empates del visitante fuera ≥ 25%",
-          "0/4 = 0%"
-        ],
-        [
-          false,
-          "Promedio de goles ≤ 2.5",
-          "4.00 y 3.56 (prom. 3.78)"
-        ],
-        [
-          null,
-          "H2H: ≥ 2 empates últimos 5",
-          "sin dato"
-        ],
-        [
-          true,
-          "Sin goleador en forma (≥ 8 goles)",
-          "máx. 3 y 3 goles"
-        ],
-        [
-          true,
-          "Sin presión extrema",
-          "15° y 17°"
-        ]
-      ],
-      "note": "Cuota 3.50 fuera de 2.60–3.40. Score 4/8. Sassuolo 15° (8 pts) y Fiorentina 17° (5 pts). Empates 25% casa / 0% fuera. Goles 3.78. H2H sin dato.",
-      "alerts": "No cumple: Zona media (6-15), Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
     },
     {
       "league": "ita",
@@ -692,16 +580,24 @@ const MATCHES = DATA.matches || [];
 /* =========================
    ESTADO Y RENDER
    ========================= */
-const state = { league:'all', hideEmpty:false, onlyCandidates:false };
+const state = { league:'all', hideEmpty:false, candidateTier:null };
 
 const $ = (id) => document.getElementById(id);
 const leagueById = (id) => LEAGUES.find(l => l.id === id);
+const isHighCandidate = (m) => m.status === 'candidate' && (m.score ?? 0) >= 7;
+const isMediumCandidate = (m) => m.status === 'candidate' && (m.score ?? 0) >= 5 && (m.score ?? 0) < 7;
+const matchesTier = (m) => {
+  if (state.candidateTier === 'high') return isHighCandidate(m);
+  if (state.candidateTier === 'medium') return isMediumCandidate(m);
+  return true;
+};
+const tierLabel = () => state.candidateTier === 'high' ? 'alta' : 'media';
 
 function visibleLeagues(){
   if (state.league !== 'all') return LEAGUES.filter(l => l.id === state.league);
-  if (state.onlyCandidates){
+  if (state.candidateTier){
     return LEAGUES.filter(l =>
-      MATCHES.some(m => m.league === l.id && m.status === 'candidate')
+      MATCHES.some(m => m.league === l.id && matchesTier(m))
     );
   }
   return LEAGUES.filter(l =>
@@ -713,7 +609,7 @@ function leagueMatches(){
 }
 function filteredMatches(){
   const ms = leagueMatches();
-  return state.onlyCandidates ? ms.filter(m => m.status === 'candidate') : ms;
+  return state.candidateTier ? ms.filter(matchesTier) : ms;
 }
 
 function esc(value){
@@ -729,14 +625,16 @@ function applyMeta(){
   $('cutoff').textContent = DATA.cutoff || '—';
   $('dateNote').textContent = label || '—';
   $('dateFooter').textContent = label || '—';
-  $('viewHint').textContent = `Vista del ${label || 'día'}: solo los partidos y el análisis de esta jornada.`;
+  $('viewHint').textContent = `Vista del ${label || 'día'}: solo los partidos y el análisis de esta jornada.` +
+    (state.candidateTier ? ` Filtro: candidatos de calificación ${tierLabel()}.` : '');
   $('sourceNote').textContent = DATA.source || 'ESPN (gratis, sin API key)';
 }
 
 function pill(m){
   if (m.status === 'candidate'){
-    const icon = (m.score ?? 0) >= 7 ? '🟢' : (m.score ?? 0) >= 5 ? '🟡' : '🔴';
-    return {cls:'pill-candidate', text:`${icon} ${m.score ?? 0}/8`};
+    const high = (m.score ?? 0) >= 7;
+    const icon = high ? '🟢' : (m.score ?? 0) >= 5 ? '🟡' : '🔴';
+    return {cls: high ? 'pill-high' : 'pill-candidate', text:`${icon} ${m.score ?? 0}/8`};
   }
   if (m.status === 'rejected'){
     return {cls:'pill-rejected', text: m.score != null ? `🔴 ${m.score}/8` : '🔴 Fuera'};
@@ -767,6 +665,8 @@ function criteriaTable(criteria){
 
 function renderMatch(m){
   const p = pill(m);
+  const classes = ['match', m.status];
+  if (m.status === 'candidate') classes.push((m.score ?? 0) >= 7 ? 'high' : 'medium');
   const meta = `<div class="match-meta"><span class="odds">${oddsText(m)}</span></div>`;
   const note = m.note ? `<p class="note" title="${esc(m.note)}">${esc(m.note)}</p>` : '';
   const alerts = m.alerts ? `<p class="note alert" title="${esc(m.alerts)}">⚠️ ${esc(m.alerts)}</p>` : '';
@@ -774,7 +674,7 @@ function renderMatch(m){
     ? `<details><summary>Ver los 8 criterios</summary>${criteriaTable(m.criteria)}</details>`
     : '';
   return `
-    <article class="match ${m.status}">
+    <article class="${classes.join(' ')}">
       <div class="match-head">
         <span class="time">${esc(m.time)}</span>
         <div class="teams"><b>${esc(m.home)}</b> <span class="vs">vs</span> <b>${esc(m.away)}</b></div>
@@ -797,7 +697,9 @@ function renderLeague(l, matches){
   } else if (count){
     badge = `<span class="badge b-matches">${count} partido${count > 1 ? 's' : ''}</span>`;
   }
-  const emptyText = state.onlyCandidates ? 'Sin candidatos en esta liga.' : 'Sin partidos por jugar hoy.';
+  const emptyText = state.candidateTier
+    ? `Sin candidatos de calificación ${tierLabel()} en esta liga.`
+    : 'Sin partidos por jugar hoy.';
   const empty = count ? '' : `<div class="empty">${emptyText}</div>`;
   const body = count
     ? `<div class="matches ${count === 1 ? 'single' : ''}">${matches.map(renderMatch).join('')}</div>`
@@ -820,8 +722,8 @@ function renderGrid(){
   const leagues = visibleLeagues();
   const ms = filteredMatches();
   if (!leagues.length){
-    const message = state.onlyCandidates
-      ? 'No hay candidatos con los filtros actuales.'
+    const message = state.candidateTier
+      ? `No hay candidatos de calificación ${tierLabel()} con los filtros actuales.`
       : 'No hay partidos para mostrar con los filtros actuales.';
     $('grid').innerHTML = `<div class="empty-state">${esc(message)}</div>`;
     return;
@@ -835,18 +737,22 @@ function renderGrid(){
 function renderStats(){
   const ms = leagueMatches();
   $('sLeagues').textContent = visibleLeagues().length;
-  $('sMatches').textContent = ms.length;
-  $('sCandidates').textContent = ms.filter(m => m.status === 'candidate').length;
-  $('sDiscarded').textContent = ms.filter(m =>
-    m.status === 'rejected' || m.status === 'pending'
-  ).length;
-  const filter = $('filterCandidates');
-  filter.classList.toggle('active', state.onlyCandidates);
-  filter.setAttribute('aria-pressed', String(state.onlyCandidates));
-  filter.title = state.onlyCandidates
-    ? 'Quitar filtro: mostrar todos los partidos'
-    : 'Mostrar solo candidatos';
-  $('sCandidatesLabel').textContent = state.onlyCandidates ? 'candidatos · filtro' : 'candidatos';
+  $('sMatches').textContent = filteredMatches().length;
+  $('sHigh').textContent = ms.filter(isHighCandidate).length;
+  $('sMedium').textContent = ms.filter(isMediumCandidate).length;
+
+  [
+    ['filterHigh', 'high', 'alta'],
+    ['filterMedium', 'medium', 'media'],
+  ].forEach(([id, tier, label]) => {
+    const filter = $(id);
+    const active = state.candidateTier === tier;
+    filter.classList.toggle('active', active);
+    filter.setAttribute('aria-pressed', String(active));
+    filter.title = active
+      ? 'Quitar filtro: mostrar todos los partidos'
+      : `Mostrar solo candidatos de calificación ${label}`;
+  });
 }
 
 function renderChips(){
@@ -871,10 +777,13 @@ function renderAll(){
   renderGrid();
 }
 
-$('filterCandidates').addEventListener('click', () => {
-  state.onlyCandidates = !state.onlyCandidates;
+function toggleCandidateTier(tier){
+  state.candidateTier = state.candidateTier === tier ? null : tier;
   renderAll();
-});
+}
+
+$('filterHigh').addEventListener('click', () => toggleCandidateTier('high'));
+$('filterMedium').addEventListener('click', () => toggleCandidateTier('medium'));
 
 $('hideEmpty').addEventListener('change', (e) => {
   state.hideEmpty = e.target.checked;
