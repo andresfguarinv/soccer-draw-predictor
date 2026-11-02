@@ -91,8 +91,12 @@ def render_index(entries: list[dict]) -> str:
     latest_link = ""
     if latest:
         latest_link = (
+            '<div class="latest-row">'
             f'<a class="latest" href="pages/{latest["date"]}.html">'
-            f"Abrir la última fecha →</a>"
+            "Abrir la última fecha →</a>"
+            '<button class="refresh" id="refreshArchive" type="button" '
+            'title="Volver a cargar la lista de fechas">↻ Refrescar</button>'
+            "</div>"
         )
 
     cards_html = "\n".join(cards) if cards else (
@@ -121,11 +125,19 @@ def render_index(entries: list[dict]) -> str:
   .eyebrow{{margin:0 0 10px;color:var(--yellow);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}}
   h1{{margin:0;font-size:clamp(30px,6vw,48px);letter-spacing:-.035em;line-height:1.05}}
   .sub{{margin:14px 0 22px;color:var(--muted);max-width:650px}}
+  .latest-row{{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:28px}}
   .latest{{
-    display:inline-block;margin-bottom:28px;padding:11px 16px;border-radius:999px;
+    display:inline-block;padding:11px 16px;border-radius:999px;
     color:#111;background:var(--yellow);font-weight:700;text-decoration:none;font-size:14px;
   }}
   .latest:hover{{filter:brightness(1.06)}}
+  .refresh{{
+    display:inline-flex;align-items:center;gap:7px;padding:11px 15px;border-radius:999px;
+    border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);
+    font:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:.15s;
+  }}
+  .refresh:hover{{border-color:rgba(251,191,36,.45);background:rgba(251,191,36,.08)}}
+  .refresh:focus-visible{{outline:2px solid rgba(251,191,36,.55);outline-offset:2px}}
   .list{{display:grid;gap:12px}}
   .day{{
     display:block;padding:18px 18px 16px;border:1px solid var(--line);border-radius:16px;
@@ -154,6 +166,14 @@ def render_index(entries: list[dict]) -> str:
   </section>
   <footer>No es consejo de apuestas. Juego responsable, +18.</footer>
 </main>
+<script>
+  const refreshArchive = document.getElementById('refreshArchive');
+  if (refreshArchive) {{
+    refreshArchive.addEventListener('click', () => {{
+      location.replace(location.pathname + '?v=' + Date.now());
+    }});
+  }}
+</script>
 </body>
 </html>
 """
