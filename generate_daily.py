@@ -73,6 +73,9 @@ LEAGUES = [
 ]
 
 FINISHED_STATUS = {"FT", "AET", "PEN"}
+MIN_DRAW_ODDS = 2.60
+MAX_DRAW_ODDS = 3.40
+NEAR_DRAW_MARGIN = 0.20
 MATCH_WINNER_NAMES = {"match winner", "1x2", "full time result"}
 DRAW_NAMES = {"draw", "x", "empate"}
 
@@ -1005,13 +1008,17 @@ def pick_display_odds(odds: list[tuple[str, float]]) -> list[list[Any]]:
     for book, odd in odds:
         best_by_book[book] = max(best_by_book.get(book, 0), odd)
     pairs = sorted(best_by_book.items(), key=lambda item: item[1], reverse=True)
-    valid = [pair for pair in pairs if 2.60 <= pair[1] <= 3.20]
+    valid = [pair for pair in pairs if MIN_DRAW_ODDS <= pair[1] <= MAX_DRAW_ODDS]
     if valid:
         chosen = valid[:3]
         if len(chosen) < 3:
             chosen += [pair for pair in pairs if pair not in chosen][:3 - len(chosen)]
         return [[book, round(odd, 2)] for book, odd in chosen]
-    pairs.sort(key=lambda pair: min(abs(pair[1] - 2.60), abs(pair[1] - 3.20)))
+    pairs.sort(
+        key=lambda pair: min(
+            abs(pair[1] - MIN_DRAW_ODDS), abs(pair[1] - MAX_DRAW_ODDS)
+        )
+    )
     return [[book, round(odd, 2)] for book, odd in pairs[:2]]
 
 
@@ -1159,7 +1166,7 @@ def analyze_fixture(
     h2h_text = f"H2H {h2h_draws}/{h2h_finished}." if h2h_draws is not None else "H2H sin dato."
     note = f"{pos_text}{pts_text} y {away_pos_text}{away_pts_text}. {draw_text} {goals_text} {h2h_text}"
 
-    valid_odds = [odd for _, odd in odds if 2.60 <= odd <= 3.20]
+    valid_odds = [odd for _, odd in odds if MIN_DRAW_ODDS <= odd <= MAX_DRAW_ODDS]
     best_odd = max((odd for _, odd in odds), default=None)
     display_odds = pick_display_odds(odds)
 
@@ -1174,7 +1181,10 @@ def analyze_fixture(
     else:
         status = "rejected"
         if best_odd is not None:
-            prefixes.append(f"Cuota {best_odd:.2f} fuera de 2.60–3.20.")
+            prefixes.append(
+                f"Cuota {best_odd:.2f} fuera de "
+                f"{MIN_DRAW_ODDS:.2f}–{MAX_DRAW_ODDS:.2f}."
+            )
         if score < 5:
             prefixes.append(f"Score {score}/8.")
 
@@ -1226,8 +1236,12 @@ def build_match_basic(
             "alerts": "",
         }
 
-    valid = [odd for _, odd in odds_pairs if 2.60 <= odd <= 3.20]
-    near = [odd for _, odd in odds_pairs if 2.40 <= odd <= 3.40]
+    valid = [odd for _, odd in odds_pairs if MIN_DRAW_ODDS <= odd <= MAX_DRAW_ODDS]
+    near = [
+        odd
+        for _, odd in odds_pairs
+        if MIN_DRAW_ODDS - NEAR_DRAW_MARGIN <= odd <= MAX_DRAW_ODDS + NEAR_DRAW_MARGIN
+    ]
     if not valid and not near:
         best = max(odd for _, odd in odds_pairs)
         return {
@@ -1241,7 +1255,7 @@ def build_match_basic(
             "score": None,
             "odds": display_odds,
             "criteria": [],
-            "note": f"Cuota {best:.2f} fuera de 2.60–3.20; no se analiza.",
+            "note": f"Cuota {best:.2f} fuera de {MIN_DRAW_ODDS:.2f}–{MAX_DRAW_ODDS:.2f}; no se analiza.",
             "alerts": "",
         }
 

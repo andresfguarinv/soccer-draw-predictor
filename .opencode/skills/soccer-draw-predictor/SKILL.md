@@ -120,8 +120,10 @@ La configuración vive en `LEAGUES`, dentro de `generate_daily.py`. Si ESPN camb
   calendario. En Colombia se filtra por el `seasonType` actual (Apertura/Clausura).
 - **Cuota de empate:** se toma de `drawOdds.moneyLine` de ESPN, en formato americano, y se convierte a decimal:
   `+195` → `2.95`, `+230` → `3.30`.
-- **Rango válido:** solo cuotas entre **2.60 y 3.20**. Por debajo de 2.60 el favorito es demasiado claro; por encima
-  de 3.20 el mercado no ve el empate probable.
+- **Rango válido:** solo cuotas entre **2.60 y 3.40**. Por debajo de 2.60 el favorito es demasiado claro; por encima
+  de 3.40 el mercado no ve el empate probable. El corte anterior en 3.20 era arbitrario: en el backtest de 12 semanas,
+  la banda 3.20–3.40 dio 32.4% de acierto y ROI +6.0% (n=173), frente a 31.7% y −2.7% en 2.60–3.20
+  (reproducible en la rama `experiment/backtest-forma-reciente`).
 - **H2H:** últimos 5 partidos terminados entre los dos equipos, usando la temporada actual y las dos anteriores.
 - **Estadísticas:** posición, puntos y tamaño de la tabla; empates del local en casa y del visitante fuera; promedio
   de goles de la temporada actual.
@@ -133,20 +135,20 @@ La configuración vive en `LEAGUES`, dentro de `generate_daily.py`. Si ESPN camb
 
 | Estado | Significado |
 |--------|-------------|
-| `candidate` | Score ≥ 5/8 y al menos una cuota en 2.60–3.20. |
-| `rejected` | Score < 5/8, o cuota fuera de 2.60–3.20. |
+| `candidate` | Score ≥ 5/8 y al menos una cuota en 2.60–3.40. |
+| `rejected` | Score < 5/8, o cuota fuera de 2.60–3.40. |
 | `pending` | No hay cuota de empate disponible. |
 
 ---
 
 ## Filtro 1 — Cuota de empate
 
-- Rango válido: **2.60–3.20**.
-- Cuota ideal: entre **2.60 y 3.00**.
+- Rango válido: **2.60–3.40**.
+- Cuota ideal: entre **2.80 y 3.40** (las bandas 2.80–3.00, 3.00–3.20 y 3.20–3.40 rindieron parecido en el backtest).
 - Cuota < 2.60: favorito claro, ganancia baja.
-- Cuota > 3.20: el mercado no ve el empate probable; evitar.
-- El generador analiza además partidos con cuota cercana (2.40–3.40) para poder descartarlos con contexto, pero solo
-  los que tienen una cuota dentro de 2.60–3.20 pueden quedar como `candidate`.
+- Cuota > 3.40: el mercado no ve el empate probable; evitar.
+- El generador analiza además partidos con cuota cercana (2.40–3.60) para poder descartarlos con contexto, pero solo
+  los que tienen una cuota dentro de 2.60–3.40 pueden quedar como `candidate`.
 
 ---
 

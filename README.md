@@ -80,15 +80,15 @@ El plan free de API-Football responde `Free plans do not have access to this sea
 
 1. Consulta los fixtures del día para las 10 ligas.
 2. Omite partidos que ya empezaron o terminaron, comparando la hora de inicio con `--now` (America/Bogota).
-3. Se queda con las cuotas de empate en **2.60–3.20**.
-4. Para los partidos con cuota válida o cercana (2.40–3.40), consulta:
+3. Se queda con las cuotas de empate en **2.60–3.40**.
+4. Para los partidos con cuota válida o cercana (2.40–3.60), consulta:
    - Standings: posición, puntos y tamaño de la tabla.
    - Estadísticas del local y del visitante: empates en casa/fuera y promedio de goles de la temporada actual.
    - H2H: últimos 5 partidos terminados (temporada actual + dos anteriores).
    - Goleadores: proxy de "goleador en forma" (≥ 8 goles en la temporada).
 5. Calcula el score base de 8 criterios.
 6. Marca:
-   - `candidate`: score ≥ 5/8 y al menos una cuota en 2.60–3.20.
+   - `candidate`: score ≥ 5/8 y al menos una cuota en 2.60–3.40.
    - `rejected`: score < 5/8 o cuota fuera de rango.
    - `pending`: no hay cuota de empate disponible.
 7. Inyecta los datos en `index.html`, crea `pages/YYYY-MM-DD.html` y guarda `data/YYYY-MM-DD.json`.
@@ -96,6 +96,8 @@ El plan free de API-Football responde `Free plans do not have access to this sea
 ## Score y ajustes
 
 El score que se muestra es la **base de 8 criterios**. Los ajustes cualitativos de la skill (simetría motivacional, altura, copa continental, riesgo de expulsión, primeras fechas) se muestran como **alertas** para revisión manual. Esto evita que una regla automática descarte un candidato sin contexto.
+
+En noviembre de 2026 el máximo de cuota subió de 3.20 a **3.40**: el backtest de 12 semanas mostró que la banda 3.20–3.40 no era peor (32.4% de acierto, ROI +6.0%, n=173) que 2.60–3.20 (31.7%, −2.7%). Ver la rama `experiment/backtest-forma-reciente`.
 
 Si no hay ningún candidato, el HTML recomienda esperar.
 
