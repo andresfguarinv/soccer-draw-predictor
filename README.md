@@ -173,6 +173,8 @@ https://tu-sitio/pages/2026-10-21.html
 
 El repositorio incluye el workflow `.github/workflows/pages.yml`, que genera y publica el sitio todos los días a las 00:05 de Bogotá.
 
+La página de una fecha se genera una sola vez: si `data/AAAA-MM-DD.json` ya existe, los `push` posteriores no la vuelven a generar. Así se conservan todos los partidos de la jornada aunque algunos ya hayan comenzado. Para forzar una regeneración manual, ejecuta el workflow desde **Actions** con la opción **Regenerar la página de hoy aunque ya exista** (`force`). Ten en cuenta que una regeneración tardía solo incluye los partidos que aún no han comenzado.
+
 1. Crea un repositorio **vacío** en GitHub, sin README ni `.gitignore`, y copia su URL.
 2. Conecta el repositorio local y sube la rama `main`:
 

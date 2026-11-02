@@ -8,6 +8,12 @@ on:
     - cron: "5 0 * * *"
       timezone: "America/Bogota"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Regenerar la página de hoy aunque ya exista"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -30,7 +36,21 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Comprobar si la página del día ya existe
+        id: daily
+        run: |
+          TODAY=$(TZ=America/Bogota date +%F)
+          FORCE="${{ github.event.inputs.force }}"
+          if [ -f "data/$TODAY.json" ] && [ "$FORCE" != "true" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "La página de $TODAY ya existe; se conserva sin regenerar."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "Se generará la página de $TODAY."
+          fi
+
       - name: Generar página del día
+        if: steps.daily.outputs.skip != 'true'
         run: python3 generate_daily.py
 
       - name: Preparar sitio estático
