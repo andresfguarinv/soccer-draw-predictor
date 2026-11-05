@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-05",
+  "date_label": "Jueves 05/11/2026",
+  "generated_at": "2026-11-05T08:02:31.274730-05:00",
+  "cutoff": "08:02",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "par",
+      "fixture_id": "401888568",
+      "kickoff": "2026-11-05T17:00:00-05:00",
+      "time": "17:00",
+      "home": "Rubio Ñú",
+      "away": "Sportivo Luqueño",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "10° y 9°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "16 vs 16"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "4/8 = 50%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/8 = 12%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.82 y 2.94 (prom. 2.88)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "1 empates en 3"
+        ],
+        [
+          null,
+          "Sin goleador en forma (≥ 8 goles)",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "10° y 9° · descenso"
+        ]
+      ],
+      "note": "No alcanza 5/8 (3/8). Rubio Ñú 10° (16 pts) y Sportivo Luqueño 9° (16 pts). Empates 50% casa / 12% fuera. Goles 2.88. H2H 1/3.",
+      "alerts": "No cumple: Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, H2H: ≥ 2 empates últimos 5, Sin presión extrema. Sin verificar: Sin goleador en forma (≥ 8 goles). Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    }
+  ],
+  "warnings": []
+}
