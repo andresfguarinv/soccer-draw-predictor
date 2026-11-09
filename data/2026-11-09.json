@@ -1,0 +1,341 @@
+{
+  "date": "2026-11-09",
+  "date_label": "Lunes 09/11/2026",
+  "generated_at": "2026-11-09T08:46:31.569359-05:00",
+  "cutoff": "08:46",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "col",
+      "fixture_id": "401877901",
+      "kickoff": "2026-11-09T19:00:00-05:00",
+      "time": "19:00",
+      "home": "Atlético Junior",
+      "away": "Cúcuta Deportivo",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.85
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.85 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "par",
+      "fixture_id": "401888647",
+      "kickoff": "2026-11-09T15:00:00-05:00",
+      "time": "15:00",
+      "home": "Sportivo San Lorenzo",
+      "away": "Rubio Ñú",
+      "status": "rejected",
+      "score": 0,
+      "odds": [
+        [
+          "DraftKings",
+          3.5
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "12° y 11°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "10 vs 16"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "2/9 = 22%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/9 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.33 y 2.94 (prom. 2.64)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "0 empates en 3"
+        ],
+        [
+          null,
+          "Sin goleador en forma (≥ 8 goles)",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "12° y 11° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.50 fuera de 2.60–3.40. Score 0/8. Sportivo San Lorenzo 12° (10 pts) y Rubio Ñú 11° (16 pts). Empates 22% casa / 0% fuera. Goles 2.64. H2H 0/3.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, H2H: ≥ 2 empates últimos 5, Sin presión extrema. Sin verificar: Sin goleador en forma (≥ 8 goles). Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    },
+    {
+      "league": "par",
+      "fixture_id": "401888648",
+      "kickoff": "2026-11-09T17:30:00-05:00",
+      "time": "17:30",
+      "home": "Sportivo Luqueño",
+      "away": "2 de Mayo",
+      "status": "rejected",
+      "score": 2,
+      "odds": [
+        [
+          "DraftKings",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "9° y 6°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "19 vs 30"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/9 = 0%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "2/9 = 22%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.06 y 2.00 (prom. 2.53)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "1 empates en 5"
+        ],
+        [
+          null,
+          "Sin goleador en forma (≥ 8 goles)",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "9° y 6°"
+        ]
+      ],
+      "note": "No alcanza 5/8 (2/8). Sportivo Luqueño 9° (19 pts) y 2 de Mayo 6° (30 pts). Empates 0% casa / 22% fuera. Goles 2.53. H2H 1/5.",
+      "alerts": "No cumple: Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, H2H: ≥ 2 empates últimos 5. Sin verificar: Sin goleador en forma (≥ 8 goles)."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883139",
+      "kickoff": "2026-11-09T14:30:00-05:00",
+      "time": "14:30",
+      "home": "CD Sabadell",
+      "away": "Real Sociedad II",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.6
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "12° y 19°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "17 vs 11"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/5 = 40%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "1.92 y 3.08 (prom. 2.50)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 3 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "12° y 19°"
+        ]
+      ],
+      "note": "Cuota 3.60 fuera de 2.60–3.40. Score 4/8. CD Sabadell 12° (17 pts) y Real Sociedad II 19° (11 pts). Empates 40% casa / 17% fuera. Goles 2.50. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del visitante fuera ≥ 25%. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883140",
+      "kickoff": "2026-11-09T14:30:00-05:00",
+      "time": "14:30",
+      "home": "Las Palmas",
+      "away": "Eldense",
+      "status": "rejected",
+      "score": 5,
+      "odds": [
+        [
+          "DraftKings",
+          3.6
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "13° y 15°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "17 vs 14"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/6 = 33%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/6 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.17 y 2.50 (prom. 2.83)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 4 y 3 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "13° y 15°"
+        ]
+      ],
+      "note": "Cuota 3.60 fuera de 2.60–3.40. Las Palmas 13° (17 pts) y Eldense 15° (14 pts). Empates 33% casa / 0% fuera. Goles 2.83. H2H sin dato.",
+      "alerts": "No cumple: Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    }
+  ],
+  "warnings": []
+}
