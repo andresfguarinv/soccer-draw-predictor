@@ -1,0 +1,202 @@
+{
+  "date": "2026-11-13",
+  "date_label": "Viernes 13/11/2026",
+  "generated_at": "2026-11-13T07:58:31.469101-05:00",
+  "cutoff": "07:58",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "col",
+      "fixture_id": "401877838",
+      "kickoff": "2026-11-13T20:30:00-05:00",
+      "time": "20:30",
+      "home": "Internacional de Bogotá",
+      "away": "Independiente Santa Fe",
+      "status": "rejected",
+      "score": 1,
+      "odds": [
+        [
+          "DraftKings",
+          3.3
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "14° y 5°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "20 vs 31"
+        ],
+        [
+          null,
+          "Empates del local en casa ≥ 25%",
+          "sin dato"
+        ],
+        [
+          null,
+          "Empates del visitante fuera ≥ 25%",
+          "sin dato"
+        ],
+        [
+          null,
+          "Promedio de goles ≤ 2.5",
+          "sin dato"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "0 empates en 5"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 10 y 17 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "14° y 5°"
+        ]
+      ],
+      "note": "No alcanza 5/8 (1/8). Internacional de Bogotá 14° (20 pts) y Independiente Santa Fe 5° (31 pts). Empates sin dato casa / sin dato fuera. Goles sin dato. H2H 0/5.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, H2H: ≥ 2 empates últimos 5, Sin goleador en forma (≥ 8 goles). Sin verificar: Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Ajuste potencial -1: pocos partidos jugados; tabla poco confiable."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883136",
+      "kickoff": "2026-11-13T14:30:00-05:00",
+      "time": "14:30",
+      "home": "Leganés",
+      "away": "Burgos",
+      "status": "rejected",
+      "score": 1,
+      "odds": [
+        [
+          "DraftKings",
+          3.1
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "18° y 3°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "12 vs 24"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/5 = 20%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.62 y 2.54 (prom. 2.58)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 4 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "18° y 3° · título"
+        ]
+      ],
+      "note": "No alcanza 5/8 (1/8). Leganés 18° (12 pts) y Burgos 3° (24 pts). Empates 17% casa / 20% fuera. Goles 2.58. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    }
+  ],
+  "warnings": []
+}
