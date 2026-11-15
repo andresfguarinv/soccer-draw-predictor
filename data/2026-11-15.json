@@ -1,0 +1,281 @@
+{
+  "date": "2026-11-15",
+  "date_label": "Domingo 15/11/2026",
+  "generated_at": "2026-11-15T07:38:44.214919-05:00",
+  "cutoff": "07:38",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "esp2",
+      "fixture_id": "401883113",
+      "kickoff": "2026-11-15T08:00:00-05:00",
+      "time": "08:00",
+      "home": "Tenerife",
+      "away": "Ceuta",
+      "status": "rejected",
+      "score": 1,
+      "odds": [
+        [
+          "DraftKings",
+          3.6
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "14° y 22°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "15 vs 5"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "3/6 = 50%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.67 y 3.08 (prom. 2.87)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 8 y 4 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "14° y 22° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.60 fuera de 2.60–3.40. Score 1/8. Tenerife 14° (15 pts) y Ceuta 22° (5 pts). Empates 50% casa / 17% fuera. Goles 2.87. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles), Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883116",
+      "kickoff": "2026-11-15T10:15:00-05:00",
+      "time": "10:15",
+      "home": "Granada",
+      "away": "Las Palmas",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.4
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "7° y 11°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "23 vs 20"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/5 = 20%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/6 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.83 y 3.08 (prom. 2.96)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 4 y 4 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "7° y 11°"
+        ]
+      ],
+      "note": "No alcanza 5/8 (4/8). Granada 7° (23 pts) y Las Palmas 11° (20 pts). Empates 20% casa / 0% fuera. Goles 2.96. H2H sin dato.",
+      "alerts": "No cumple: Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883117",
+      "kickoff": "2026-11-15T12:30:00-05:00",
+      "time": "12:30",
+      "home": "Eibar",
+      "away": "Cádiz",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.3
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.30 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883137",
+      "kickoff": "2026-11-15T12:30:00-05:00",
+      "time": "12:30",
+      "home": "Eldense",
+      "away": "CD Sabadell",
+      "status": "candidate",
+      "score": 6,
+      "odds": [
+        [
+          "DraftKings",
+          2.95
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "16° y 13°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "14 vs 18"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/6 = 33%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "3/7 = 43%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.46 y 1.77 (prom. 2.12)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 3 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "16° y 13°"
+        ]
+      ],
+      "note": "Eldense 16° (14 pts) y CD Sabadell 13° (18 pts). Empates 33% casa / 43% fuera. Goles 2.12. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15). Sin verificar: H2H: ≥ 2 empates últimos 5."
+    }
+  ],
+  "warnings": []
+}
