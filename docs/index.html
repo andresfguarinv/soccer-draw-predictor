@@ -32,6 +32,19 @@
   }
   .refresh:hover{border-color:rgba(251,191,36,.45);background:rgba(251,191,36,.08)}
   .refresh:focus-visible{outline:2px solid rgba(251,191,36,.55);outline-offset:2px}
+  .notice{
+    display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+    margin:0 0 24px;padding:16px 18px;border:1px solid rgba(251,191,36,.45);border-radius:16px;
+    background:rgba(251,191,36,.08);
+  }
+  .notice[hidden]{display:none}
+  .notice strong{display:block;font-size:15px;color:var(--text)}
+  .notice p{margin:6px 0 0;color:var(--muted);font-size:13px;max-width:520px}
+  .notice-btn{
+    display:inline-block;padding:10px 15px;border-radius:999px;text-decoration:none;
+    color:#111;background:var(--yellow);font-weight:700;font-size:13px;white-space:nowrap;
+  }
+  .notice-btn:hover{filter:brightness(1.06)}
   .list{display:grid;gap:12px}
   .day{
     display:block;padding:18px 18px 16px;border:1px solid var(--line);border-radius:16px;
@@ -54,6 +67,13 @@
   <p class="eyebrow">Soccer Draw Predictor</p>
   <h1>Archivo de predicciones</h1>
   <p class="sub">Páginas diarias generadas con ESPN. Cada fecha conserva sus candidatos, cuotas y criterios. Confirma siempre la cuota final en Betplay.</p>
+  <div class="notice" id="dailyNotice" hidden>
+    <div>
+      <strong>La predicción de hoy no está generada todavía.</strong>
+      <p id="dailyNoticeText">El archivo se actualiza solo cada día. Si ya pasó la hora y sigue sin aparecer, puedes ejecutar la generación manualmente en GitHub Actions.</p>
+    </div>
+    <a class="notice-btn" href="https://github.com/andresfguarinv/soccer-draw-predictor/actions/workflows/pages.yml" target="_blank" rel="noopener">Ejecutar en GitHub Actions ↗</a>
+  </div>
   <div class="latest-row"><a class="latest" href="pages/2026-11-20.html">Abrir la última fecha →</a><button class="refresh" id="refreshArchive" type="button" title="Volver a cargar la lista de fechas">↻ Refrescar</button></div>
   <section class="list" aria-label="Fechas disponibles">
     
@@ -320,6 +340,39 @@
   if (refreshArchive) {
     refreshArchive.addEventListener('click', () => {
       location.replace(location.pathname + '?v=' + Date.now());
+    });
+  }
+
+  const dailyNotice = document.getElementById('dailyNotice');
+  const dailyNoticeText = document.getElementById('dailyNoticeText');
+  if (dailyNotice) {
+    const today = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'America/Bogota',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).format(new Date());
+    const readable = new Intl.DateTimeFormat('es-CO', {
+      timeZone: 'America/Bogota',
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long'
+    }).format(new Date());
+
+    fetch('pages/' + today + '.html?cb=' + Date.now(), {
+      method: 'HEAD',
+      cache: 'no-store'
+    }).then((res) => {
+      if (res.status === 404) {
+        if (dailyNoticeText) {
+          dailyNoticeText.textContent =
+            'No existe la página del ' + readable + '. El archivo se actualiza solo cada día; ' +
+            'si ya pasó la hora y sigue sin aparecer, ejecuta la generación manualmente en GitHub Actions.';
+        }
+        dailyNotice.hidden = false;
+      }
+    }).catch(() => {
+      // Sin conexión o sin soporte de HEAD: no alarmamos al usuario.
     });
   }
 </script>
