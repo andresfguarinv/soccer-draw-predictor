@@ -1,0 +1,842 @@
+{
+  "date": "2026-11-22",
+  "date_label": "Domingo 22/11/2026",
+  "generated_at": "2026-11-22T07:48:14.588572-05:00",
+  "cutoff": "07:48",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "par",
+      "fixture_id": "401888645",
+      "kickoff": "2026-11-22T16:00:00-05:00",
+      "time": "16:00",
+      "home": "Club Olimpia",
+      "away": "Sportivo Trinidense",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.7
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.70 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "par",
+      "fixture_id": "401888646",
+      "kickoff": "2026-11-22T16:00:00-05:00",
+      "time": "16:00",
+      "home": "Rubio Ñú",
+      "away": "Libertad",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.9
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.90 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899547",
+      "kickoff": "2026-11-22T09:00:00-05:00",
+      "time": "09:00",
+      "home": "US Avellino",
+      "away": "Mantova",
+      "status": "candidate",
+      "score": 5,
+      "odds": [
+        [
+          "DraftKings",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "8° y 4°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "16 vs 19"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/5 = 40%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.45 y 2.36 (prom. 2.41)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 5 y 5 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "8° y 4°"
+        ]
+      ],
+      "note": "US Avellino 8° (16 pts) y Mantova 4° (19 pts). Empates 17% casa / 40% fuera. Goles 2.41. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899549",
+      "kickoff": "2026-11-22T11:15:00-05:00",
+      "time": "11:15",
+      "home": "Arezzo",
+      "away": "Padova",
+      "status": "candidate",
+      "score": 5,
+      "odds": [
+        [
+          "DraftKings",
+          3.15
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "16° y 11°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "11 vs 15"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/5 = 40%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/5 = 20%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.64 y 2.27 (prom. 2.45)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 0 y 0 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "16° y 11°"
+        ]
+      ],
+      "note": "Arezzo 16° (11 pts) y Padova 11° (15 pts). Empates 40% casa / 20% fuera. Goles 2.45. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Empates del visitante fuera ≥ 25%. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401882300",
+      "kickoff": "2026-11-22T08:00:00-05:00",
+      "time": "08:00",
+      "home": "Córdoba",
+      "away": "Real Oviedo",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.8
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.80 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401882298",
+      "kickoff": "2026-11-22T10:15:00-05:00",
+      "time": "10:15",
+      "home": "Sporting Gijón",
+      "away": "Las Palmas",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.3
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "8° y 11°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "23 vs 20"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/7 = 14%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/7 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.36 y 2.93 (prom. 2.64)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 4 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "8° y 11°"
+        ]
+      ],
+      "note": "No alcanza 5/8 (4/8). Sporting Gijón 8° (23 pts) y Las Palmas 11° (20 pts). Empates 14% casa / 0% fuera. Goles 2.64. H2H sin dato.",
+      "alerts": "No cumple: Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883109",
+      "kickoff": "2026-11-22T12:30:00-05:00",
+      "time": "12:30",
+      "home": "Girona",
+      "away": "Eibar",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.65
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.65 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883304",
+      "kickoff": "2026-11-22T12:30:00-05:00",
+      "time": "12:30",
+      "home": "RC Celta Fortuna",
+      "away": "Real Valladolid",
+      "status": "pending",
+      "score": null,
+      "odds": [],
+      "criteria": [],
+      "note": "Sin cuota de empate disponible. Revisar Betplay antes de considerar el partido.",
+      "alerts": ""
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883111",
+      "kickoff": "2026-11-22T15:00:00-05:00",
+      "time": "15:00",
+      "home": "Burgos",
+      "away": "Albacete",
+      "status": "rejected",
+      "score": 2,
+      "odds": [
+        [
+          "DraftKings",
+          3.3
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "7° y 20°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "24 vs 13"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/8 = 25%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/7 = 14%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.64 y 2.71 (prom. 2.68)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "0 empates en 4"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 4 y 0 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "7° y 20° · descenso"
+        ]
+      ],
+      "note": "No alcanza 5/8 (2/8). Burgos 7° (24 pts) y Albacete 20° (13 pts). Empates 25% casa / 14% fuera. Goles 2.68. H2H 0/4.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, H2H: ≥ 2 empates últimos 5, Sin presión extrema."
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401875047",
+      "kickoff": "2026-11-22T09:00:00-05:00",
+      "time": "09:00",
+      "home": "Bologna",
+      "away": "Udinese",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.55
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "9° y 20°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "17 vs 5"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/5 = 40%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/5 = 20%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.73 y 3.36 (prom. 3.05)"
+        ],
+        [
+          true,
+          "H2H: ≥ 2 empates últimos 5",
+          "2 empates en 4"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 3 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "9° y 20° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.55 fuera de 2.60–3.40. Score 3/8. Bologna 9° (17 pts) y Udinese 20° (5 pts). Empates 40% casa / 20% fuera. Goles 3.05. H2H 2/4.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, Sin presión extrema."
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401874960",
+      "kickoff": "2026-11-22T09:00:00-05:00",
+      "time": "09:00",
+      "home": "Sassuolo",
+      "away": "Genoa",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.15
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "16° y 13°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "8 vs 13"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/5 = 20%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/4 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "4.09 y 2.45 (prom. 3.27)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 4 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "16° y 13°"
+        ]
+      ],
+      "note": "No alcanza 5/8 (3/8). Sassuolo 16° (8 pts) y Genoa 13° (13 pts). Empates 20% casa / 0% fuera. Goles 3.27. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401874989",
+      "kickoff": "2026-11-22T12:00:00-05:00",
+      "time": "12:00",
+      "home": "AC Milan",
+      "away": "Frosinone",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.2
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.20 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401875001",
+      "kickoff": "2026-11-22T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Atalanta",
+      "away": "Internazionale",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.5
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.50 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882804",
+      "kickoff": "2026-11-22T08:00:00-05:00",
+      "time": "08:00",
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          8.5
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 8.50 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882800",
+      "kickoff": "2026-11-22T10:15:00-05:00",
+      "time": "10:15",
+      "home": "Racing Santander",
+      "away": "Real Sociedad",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.0
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.00 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882801",
+      "kickoff": "2026-11-22T12:30:00-05:00",
+      "time": "12:30",
+      "home": "Osasuna",
+      "away": "Málaga",
+      "status": "rejected",
+      "score": 2,
+      "odds": [
+        [
+          "DraftKings",
+          3.6
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "16° y 20°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "12 vs 5"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "3/6 = 50%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/6 = 33%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.92 y 2.67 (prom. 2.79)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 8 y 5 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "16° y 20° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.60 fuera de 2.60–3.40. Score 2/8. Osasuna 16° (12 pts) y Málaga 20° (5 pts). Empates 50% casa / 33% fuera. Goles 2.79. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles), Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882803",
+      "kickoff": "2026-11-22T15:00:00-05:00",
+      "time": "15:00",
+      "home": "Getafe",
+      "away": "Atlético Madrid",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.0
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.00 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876397",
+      "kickoff": "2026-11-22T09:00:00-05:00",
+      "time": "09:00",
+      "home": "Paris",
+      "away": "Angers",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          6.0
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 6.00 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876401",
+      "kickoff": "2026-11-22T11:15:00-05:00",
+      "time": "11:15",
+      "home": "Lorient",
+      "away": "Stade Rennais",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.3
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "10° y 9°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "15 vs 16"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/5 = 20%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/4 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "1.70 y 4.20 (prom. 2.95)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 2 y 7 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "10° y 9°"
+        ]
+      ],
+      "note": "No alcanza 5/8 (4/8). Lorient 10° (15 pts) y Stade Rennais 9° (16 pts). Empates 20% casa / 0% fuera. Goles 2.95. H2H sin dato.",
+      "alerts": "No cumple: Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876400",
+      "kickoff": "2026-11-22T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Marseille",
+      "away": "Le Mans",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.9
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.90 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "usa",
+      "fixture_id": "401933731",
+      "kickoff": "2026-11-22T16:00:00-05:00",
+      "time": "16:00",
+      "home": "Nashville",
+      "away": "FC Cincinnati",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.4
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.40 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "usa",
+      "fixture_id": "401933730",
+      "kickoff": "2026-11-22T18:30:00-05:00",
+      "time": "18:30",
+      "home": "Chicago Fire",
+      "away": "Charlotte",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.3
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.30 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "usa",
+      "fixture_id": "401933729",
+      "kickoff": "2026-11-22T20:30:00-05:00",
+      "time": "20:30",
+      "home": "Vancouver Whitecaps",
+      "away": "Real Salt Lake",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.7
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.70 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    }
+  ],
+  "warnings": []
+}
