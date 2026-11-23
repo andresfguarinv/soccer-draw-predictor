@@ -1,0 +1,401 @@
+{
+  "date": "2026-11-23",
+  "date_label": "Lunes 23/11/2026",
+  "generated_at": "2026-11-23T10:51:20.194865-05:00",
+  "cutoff": "10:51",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "par",
+      "fixture_id": "401888561",
+      "kickoff": "2026-11-23T16:00:00-05:00",
+      "time": "16:00",
+      "home": "2 de Mayo",
+      "away": "Sportivo San Lorenzo",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.7
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.70 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "par",
+      "fixture_id": "401888562",
+      "kickoff": "2026-11-23T18:15:00-05:00",
+      "time": "18:15",
+      "home": "Nacional Asunción",
+      "away": "Cerro Porteño",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "4° y 7°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "32 vs 28"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "2/9 = 22%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/9 = 11%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.11 y 2.37 (prom. 2.24)"
+        ],
+        [
+          true,
+          "H2H: ≥ 2 empates últimos 5",
+          "2 empates en 5"
+        ],
+        [
+          null,
+          "Sin goleador en forma (≥ 8 goles)",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "4° y 7°"
+        ]
+      ],
+      "note": "No alcanza 5/8 (4/8). Nacional Asunción 4° (32 pts) y Cerro Porteño 7° (28 pts). Empates 22% casa / 11% fuera. Goles 2.24. H2H 2/5.",
+      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%. Sin verificar: Sin goleador en forma (≥ 8 goles)."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883110",
+      "kickoff": "2026-11-23T14:30:00-05:00",
+      "time": "14:30",
+      "home": "Ceuta",
+      "away": "Almería",
+      "status": "rejected",
+      "score": 0,
+      "odds": [
+        [
+          "DraftKings",
+          3.6
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "22° y 2°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "5 vs 32"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/7 = 14%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/7 = 14%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.00 y 2.64 (prom. 2.82)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 4 y 9 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "22° y 2° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.60 fuera de 2.60–3.40. Score 0/8. Ceuta 22° (5 pts) y Almería 2° (32 pts). Empates 14% casa / 14% fuera. Goles 2.82. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles), Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5. Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401875009",
+      "kickoff": "2026-11-23T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Monza",
+      "away": "Fiorentina",
+      "status": "rejected",
+      "score": 1,
+      "odds": [
+        [
+          "DraftKings",
+          3.55
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "18° y 15°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "7 vs 9"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/5 = 0%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/5 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.82 y 3.82 (prom. 3.82)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 9 y 4 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "18° y 15° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.55 fuera de 2.60–3.40. Score 1/8. Monza 18° (7 pts) y Fiorentina 15° (9 pts). Empates 0% casa / 0% fuera. Goles 3.82. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles), Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5. Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882802",
+      "kickoff": "2026-11-23T15:00:00-05:00",
+      "time": "15:00",
+      "home": "Levante",
+      "away": "Elche",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.55
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "18° y 19°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "11 vs 10"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/5 = 20%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "3/6 = 50%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.08 y 2.83 (prom. 2.96)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 5 y 6 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "18° y 19° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.55 fuera de 2.60–3.40. Score 3/8. Levante 18° (11 pts) y Elche 19° (10 pts). Empates 20% casa / 50% fuera. Goles 2.96. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%, Promedio de goles ≤ 2.5, Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5. Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    },
+    {
+      "league": "usa",
+      "fixture_id": "401933728",
+      "kickoff": "2026-11-23T20:00:00-05:00",
+      "time": "20:00",
+      "home": "St. Louis CITY",
+      "away": "LAFC",
+      "status": "rejected",
+      "score": 0,
+      "odds": [
+        [
+          "DraftKings",
+          3.45
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "14° y 12°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "54 vs 47"
+        ],
+        [
+          null,
+          "Empates del local en casa ≥ 25%",
+          "sin dato"
+        ],
+        [
+          null,
+          "Empates del visitante fuera ≥ 25%",
+          "sin dato"
+        ],
+        [
+          null,
+          "Promedio de goles ≤ 2.5",
+          "sin dato"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "1 empates en 5"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 10 y 18 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "14° y 12° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.45 fuera de 2.60–3.40. Score 0/8. St. Louis CITY 14° (54 pts) y LAFC 12° (47 pts). Empates sin dato casa / sin dato fuera. Goles sin dato. H2H 1/5.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, H2H: ≥ 2 empates últimos 5, Sin goleador en forma (≥ 8 goles), Sin presión extrema. Sin verificar: Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Ajuste potencial -2: local en zona de descenso; revisar simetría. Ajuste potencial -1: pocos partidos jugados; tabla poco confiable."
+    }
+  ],
+  "warnings": []
+}
