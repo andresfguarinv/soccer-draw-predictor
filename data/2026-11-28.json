@@ -1,0 +1,1223 @@
+{
+  "date": "2026-11-28",
+  "date_label": "Sábado 28/11/2026",
+  "generated_at": "2026-11-28T09:02:05.362658-05:00",
+  "cutoff": "09:02",
+  "source": "ESPN gratis (sin API key) + revisión manual",
+  "leagues": [
+    {
+      "id": "col",
+      "name": "Primera A",
+      "country": "Colombia",
+      "flag": "🇨🇴",
+      "level": "Máxima"
+    },
+    {
+      "id": "par",
+      "name": "División Profesional",
+      "country": "Paraguay",
+      "flag": "🇵🇾",
+      "level": "Máxima"
+    },
+    {
+      "id": "itb",
+      "name": "Serie B",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Alta"
+    },
+    {
+      "id": "esp2",
+      "name": "Segunda División",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Alta"
+    },
+    {
+      "id": "eng2",
+      "name": "Championship",
+      "country": "Inglaterra",
+      "flag": "🇬🇧",
+      "level": "Alta"
+    },
+    {
+      "id": "ger2",
+      "name": "Bundesliga 2",
+      "country": "Alemania",
+      "flag": "🇩🇪",
+      "level": "Media"
+    },
+    {
+      "id": "ita",
+      "name": "Serie A",
+      "country": "Italia",
+      "flag": "🇮🇹",
+      "level": "Media"
+    },
+    {
+      "id": "esp",
+      "name": "La Liga",
+      "country": "España",
+      "flag": "🇪🇸",
+      "level": "Media"
+    },
+    {
+      "id": "fra",
+      "name": "Ligue 1",
+      "country": "Francia",
+      "flag": "🇫🇷",
+      "level": "Media"
+    },
+    {
+      "id": "usa",
+      "name": "MLS",
+      "country": "Estados Unidos",
+      "flag": "🇺🇸",
+      "level": "Media"
+    }
+  ],
+  "matches": [
+    {
+      "league": "col",
+      "fixture_id": "401936045",
+      "kickoff": "2026-11-28T19:30:00-05:00",
+      "time": "19:30",
+      "home": "Independiente Santa Fe",
+      "away": "Atlético Nacional",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          2.85
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "4° y 3°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "3 vs 4"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/1 = 0%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "1/1 = 100%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.00 y 2.00 (prom. 2.00)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "1 empates en 5"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 18 y 17 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "4° y 3° · descenso"
+        ]
+      ],
+      "note": "No alcanza 5/8 (3/8). Independiente Santa Fe 4° (3 pts) y Atlético Nacional 3° (4 pts). Empates 0% casa / 100% fuera. Goles 2.00. H2H 1/5.",
+      "alerts": "No cumple: Zona media (6-15), Empates del local en casa ≥ 25%, H2H: ≥ 2 empates últimos 5, Sin goleador en forma (≥ 8 goles), Sin presión extrema. Ajuste potencial -2: local en zona de descenso; revisar simetría. Ajuste potencial -1: pocos partidos jugados; tabla poco confiable."
+    },
+    {
+      "league": "par",
+      "fixture_id": "401888558",
+      "kickoff": "2026-11-28T18:00:00-05:00",
+      "time": "18:00",
+      "home": "Sportivo Trinidense",
+      "away": "Deportivo Recoleta",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.0
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.00 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899524",
+      "kickoff": "2026-11-28T11:15:00-05:00",
+      "time": "11:15",
+      "home": "Vicenza",
+      "away": "Cesena",
+      "status": "rejected",
+      "score": 1,
+      "odds": [
+        [
+          "DraftKings",
+          3.15
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "19° y 6°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "10 vs 21"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "2/6 = 33%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.31 y 2.62 (prom. 2.96)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 0 y 12 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "19° y 6° · descenso"
+        ]
+      ],
+      "note": "No alcanza 5/8 (1/8). Vicenza 19° (10 pts) y Cesena 6° (21 pts). Empates 17% casa / 33% fuera. Goles 2.96. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles), Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5. Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    },
+    {
+      "league": "itb",
+      "fixture_id": "401899522",
+      "kickoff": "2026-11-28T13:30:00-05:00",
+      "time": "13:30",
+      "home": "Palermo",
+      "away": "Benevento",
+      "status": "rejected",
+      "score": 0,
+      "odds": [
+        [
+          "DraftKings",
+          3.55
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "1° y 8°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "30 vs 19"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/6 = 0%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/5 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.62 y 2.69 (prom. 3.15)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 9 y 5 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "1° y 8° · título"
+        ]
+      ],
+      "note": "Cuota 3.55 fuera de 2.60–3.40. Score 0/8. Palermo 1° (30 pts) y Benevento 8° (19 pts). Empates 0% casa / 0% fuera. Goles 3.15. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles), Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401882297",
+      "kickoff": "2026-11-28T10:15:00-05:00",
+      "time": "10:15",
+      "home": "Albacete",
+      "away": "Tenerife",
+      "status": "rejected",
+      "score": 1,
+      "odds": [
+        [
+          "DraftKings",
+          3.2
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "20° y 14°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "13 vs 19"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "0/7 = 0%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "3/6 = 50%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.60 y 2.43 (prom. 2.51)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 0 y 8 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "20° y 14° · descenso"
+        ]
+      ],
+      "note": "No alcanza 5/8 (1/8). Albacete 20° (13 pts) y Tenerife 14° (19 pts). Empates 0% casa / 50% fuera. Goles 2.51. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Promedio de goles ≤ 2.5, Sin goleador en forma (≥ 8 goles), Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5. Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401882296",
+      "kickoff": "2026-11-28T10:15:00-05:00",
+      "time": "10:15",
+      "home": "Eldense",
+      "away": "Girona",
+      "status": "rejected",
+      "score": 2,
+      "odds": [
+        [
+          "DraftKings",
+          3.3
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "16° y 3°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "17 vs 27"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/7 = 29%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.40 y 2.67 (prom. 2.53)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 6 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "16° y 3° · título"
+        ]
+      ],
+      "note": "No alcanza 5/8 (2/8). Eldense 16° (17 pts) y Girona 3° (27 pts). Empates 29% casa / 17% fuera. Goles 2.53. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, Sin presión extrema. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883104",
+      "kickoff": "2026-11-28T12:30:00-05:00",
+      "time": "12:30",
+      "home": "Eibar",
+      "away": "Burgos",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.4
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "7° y 5°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "24 vs 27"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "3/7 = 43%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.86 y 2.53 (prom. 2.70)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "1 empates en 4"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 4 y 4 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "7° y 5°"
+        ]
+      ],
+      "note": "No alcanza 5/8 (4/8). Eibar 7° (24 pts) y Burgos 5° (27 pts). Empates 43% casa / 17% fuera. Goles 2.70. H2H 1/4.",
+      "alerts": "No cumple: Zona media (6-15), Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "esp2",
+      "fixture_id": "401883100",
+      "kickoff": "2026-11-28T15:00:00-05:00",
+      "time": "15:00",
+      "home": "Real Valladolid",
+      "away": "Real Sociedad II",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.9
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.90 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "eng2",
+      "fixture_id": "401880136",
+      "kickoff": "2026-11-28T10:00:00-05:00",
+      "time": "10:00",
+      "home": "Birmingham City",
+      "away": "Bolton Wanderers",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.8
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.80 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "eng2",
+      "fixture_id": "401880134",
+      "kickoff": "2026-11-28T10:00:00-05:00",
+      "time": "10:00",
+      "home": "Derby County",
+      "away": "Watford",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.45
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "24° y 20°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "10 vs 15"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "2/8 = 25%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/8 = 12%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.88 y 2.41 (prom. 2.65)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "0 empates en 4"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 3 y 0 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "24° y 20° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.45 fuera de 2.60–3.40. Score 3/8. Derby County 24° (10 pts) y Watford 20° (15 pts). Empates 25% casa / 12% fuera. Goles 2.65. H2H 0/4.",
+      "alerts": "No cumple: Zona media (6-15), Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, H2H: ≥ 2 empates últimos 5, Sin presión extrema. Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    },
+    {
+      "league": "eng2",
+      "fixture_id": "401880132",
+      "kickoff": "2026-11-28T10:00:00-05:00",
+      "time": "10:00",
+      "home": "Millwall",
+      "away": "Burnley",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.65
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.65 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "eng2",
+      "fixture_id": "401880130",
+      "kickoff": "2026-11-28T10:00:00-05:00",
+      "time": "10:00",
+      "home": "Queens Park Rangers",
+      "away": "Sheffield United",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.65
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.65 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "eng2",
+      "fixture_id": "401880127",
+      "kickoff": "2026-11-28T10:00:00-05:00",
+      "time": "10:00",
+      "home": "West Bromwich Albion",
+      "away": "Bristol City",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.85
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.85 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "eng2",
+      "fixture_id": "401880126",
+      "kickoff": "2026-11-28T10:00:00-05:00",
+      "time": "10:00",
+      "home": "West Ham United",
+      "away": "Stoke City",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.1
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.10 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "eng2",
+      "fixture_id": "401880125",
+      "kickoff": "2026-11-28T10:00:00-05:00",
+      "time": "10:00",
+      "home": "Wrexham",
+      "away": "Portsmouth",
+      "status": "candidate",
+      "score": 7,
+      "odds": [
+        [
+          "DraftKings",
+          3.25
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "14° y 10°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "22 vs 26"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "3/8 = 38%"
+        ],
+        [
+          true,
+          "Empates del visitante fuera ≥ 25%",
+          "4/8 = 50%"
+        ],
+        [
+          true,
+          "Promedio de goles ≤ 2.5",
+          "2.41 y 2.41 (prom. 2.41)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 5 y 4 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "14° y 10°"
+        ]
+      ],
+      "note": "Wrexham 14° (22 pts) y Portsmouth 10° (26 pts). Empates 38% casa / 50% fuera. Goles 2.41. H2H sin dato.",
+      "alerts": "Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "ger2",
+      "fixture_id": "401885039",
+      "kickoff": "2026-11-28T14:30:00-05:00",
+      "time": "14:30",
+      "home": "VfL Osnabruck",
+      "away": "Hannover 96",
+      "status": "rejected",
+      "score": 4,
+      "odds": [
+        [
+          "DraftKings",
+          3.5
+        ]
+      ],
+      "criteria": [
+        [
+          true,
+          "Zona media (6-15)",
+          "13° y 11°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "12 vs 15"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.67 y 2.75 (prom. 2.71)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 4 y 3 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "13° y 11°"
+        ]
+      ],
+      "note": "Cuota 3.50 fuera de 2.60–3.40. Score 4/8. VfL Osnabruck 13° (12 pts) y Hannover 96 11° (15 pts). Empates 17% casa / 17% fuera. Goles 2.71. H2H sin dato.",
+      "alerts": "No cumple: Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401874826",
+      "kickoff": "2026-11-28T12:00:00-05:00",
+      "time": "12:00",
+      "home": "Torino",
+      "away": "Lazio",
+      "status": "rejected",
+      "score": 2,
+      "odds": [
+        [
+          "DraftKings",
+          3.3
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "13° y 1°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "14 vs 32"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "2.75 y 3.08 (prom. 2.92)"
+        ],
+        [
+          true,
+          "H2H: ≥ 2 empates últimos 5",
+          "2 empates en 4"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 4 y 6 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "13° y 1° · título"
+        ]
+      ],
+      "note": "No alcanza 5/8 (2/8). Torino 13° (14 pts) y Lazio 1° (32 pts). Empates 17% casa / 17% fuera. Goles 2.92. H2H 2/4.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, Sin presión extrema."
+    },
+    {
+      "league": "ita",
+      "fixture_id": "401874977",
+      "kickoff": "2026-11-28T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Internazionale",
+      "away": "Genoa",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          5.5
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 5.50 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882790",
+      "kickoff": "2026-11-28T10:15:00-05:00",
+      "time": "10:15",
+      "home": "Málaga",
+      "away": "Athletic Club",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.75
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.75 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882793",
+      "kickoff": "2026-11-28T12:30:00-05:00",
+      "time": "12:30",
+      "home": "Elche",
+      "away": "Atlético Madrid",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.5
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.50 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "esp",
+      "fixture_id": "401882789",
+      "kickoff": "2026-11-28T15:00:00-05:00",
+      "time": "15:00",
+      "home": "Real Madrid",
+      "away": "Alavés",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          9.0
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 9.00 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876394",
+      "kickoff": "2026-11-28T11:15:00-05:00",
+      "time": "11:15",
+      "home": "Angers",
+      "away": "Lens",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.1
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.10 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876391",
+      "kickoff": "2026-11-28T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Le Havre AC",
+      "away": "Strasbourg",
+      "status": "rejected",
+      "score": 1,
+      "odds": [
+        [
+          "DraftKings",
+          3.5
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "18° y 16°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "2 vs 10"
+        ],
+        [
+          false,
+          "Empates del local en casa ≥ 25%",
+          "1/6 = 17%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "0/6 = 0%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.18 y 3.73 (prom. 3.45)"
+        ],
+        [
+          false,
+          "H2H: ≥ 2 empates últimos 5",
+          "0 empates en 4"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 5 y 4 goles"
+        ],
+        [
+          false,
+          "Sin presión extrema",
+          "18° y 16° · descenso"
+        ]
+      ],
+      "note": "Cuota 3.50 fuera de 2.60–3.40. Score 1/8. Le Havre AC 18° (2 pts) y Strasbourg 16° (10 pts). Empates 17% casa / 0% fuera. Goles 3.45. H2H 0/4.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5, H2H: ≥ 2 empates últimos 5, Sin presión extrema. Ajuste potencial -2: local en zona de descenso; revisar simetría."
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876390",
+      "kickoff": "2026-11-28T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Le Mans",
+      "away": "Lille",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.55
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "13° y 4°"
+        ],
+        [
+          false,
+          "Diferencia de puntos ≤ 5",
+          "11 vs 21"
+        ],
+        [
+          true,
+          "Empates del local en casa ≥ 25%",
+          "3/5 = 60%"
+        ],
+        [
+          false,
+          "Empates del visitante fuera ≥ 25%",
+          "1/5 = 20%"
+        ],
+        [
+          false,
+          "Promedio de goles ≤ 2.5",
+          "3.27 y 2.00 (prom. 2.64)"
+        ],
+        [
+          null,
+          "H2H: ≥ 2 empates últimos 5",
+          "sin dato"
+        ],
+        [
+          true,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 5 y 3 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "13° y 4°"
+        ]
+      ],
+      "note": "Cuota 3.55 fuera de 2.60–3.40. Score 3/8. Le Mans 13° (11 pts) y Lille 4° (21 pts). Empates 60% casa / 20% fuera. Goles 2.64. H2H sin dato.",
+      "alerts": "No cumple: Zona media (6-15), Diferencia de puntos ≤ 5, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Sin verificar: H2H: ≥ 2 empates últimos 5."
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876388",
+      "kickoff": "2026-11-28T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Nice",
+      "away": "Troyes",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.9
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.90 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "fra",
+      "fixture_id": "401876387",
+      "kickoff": "2026-11-28T14:45:00-05:00",
+      "time": "14:45",
+      "home": "Paris Saint-Germain",
+      "away": "Lorient",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          7.5
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 7.50 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "usa",
+      "fixture_id": "401933737",
+      "kickoff": "2026-11-28T12:30:00-05:00",
+      "time": "12:30",
+      "home": "Charlotte",
+      "away": "Chicago Fire",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.7
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.70 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "usa",
+      "fixture_id": "401933724",
+      "kickoff": "2026-11-28T14:30:00-05:00",
+      "time": "14:30",
+      "home": "Houston Dynamo",
+      "away": "San Jose Earthquakes",
+      "status": "rejected",
+      "score": 3,
+      "odds": [
+        [
+          "DraftKings",
+          3.4
+        ]
+      ],
+      "criteria": [
+        [
+          false,
+          "Zona media (6-15)",
+          "7° y 5°"
+        ],
+        [
+          true,
+          "Diferencia de puntos ≤ 5",
+          "51 vs 52"
+        ],
+        [
+          null,
+          "Empates del local en casa ≥ 25%",
+          "sin dato"
+        ],
+        [
+          null,
+          "Empates del visitante fuera ≥ 25%",
+          "sin dato"
+        ],
+        [
+          null,
+          "Promedio de goles ≤ 2.5",
+          "sin dato"
+        ],
+        [
+          true,
+          "H2H: ≥ 2 empates últimos 5",
+          "2 empates en 5"
+        ],
+        [
+          false,
+          "Sin goleador en forma (≥ 8 goles)",
+          "máx. 16 y 17 goles"
+        ],
+        [
+          true,
+          "Sin presión extrema",
+          "7° y 5°"
+        ]
+      ],
+      "note": "No alcanza 5/8 (3/8). Houston Dynamo 7° (51 pts) y San Jose Earthquakes 5° (52 pts). Empates sin dato casa / sin dato fuera. Goles sin dato. H2H 2/5.",
+      "alerts": "No cumple: Zona media (6-15), Sin goleador en forma (≥ 8 goles). Sin verificar: Empates del local en casa ≥ 25%, Empates del visitante fuera ≥ 25%, Promedio de goles ≤ 2.5. Ajuste potencial -1: pocos partidos jugados; tabla poco confiable."
+    },
+    {
+      "league": "usa",
+      "fixture_id": "401933723",
+      "kickoff": "2026-11-28T16:30:00-05:00",
+      "time": "16:30",
+      "home": "Philadelphia Union",
+      "away": "New England Revolution",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.4
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.40 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "usa",
+      "fixture_id": "401933722",
+      "kickoff": "2026-11-28T18:30:00-05:00",
+      "time": "18:30",
+      "home": "FC Cincinnati",
+      "away": "Nashville",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.65
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.65 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "usa",
+      "fixture_id": "401933726",
+      "kickoff": "2026-11-28T20:30:00-05:00",
+      "time": "20:30",
+      "home": "LAFC",
+      "away": "St. Louis CITY",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          4.2
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 4.20 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    },
+    {
+      "league": "usa",
+      "fixture_id": "401933721",
+      "kickoff": "2026-11-28T22:30:00-05:00",
+      "time": "22:30",
+      "home": "Portland Timbers",
+      "away": "FC Dallas",
+      "status": "rejected",
+      "score": null,
+      "odds": [
+        [
+          "DraftKings",
+          3.75
+        ]
+      ],
+      "criteria": [],
+      "note": "Cuota 3.75 fuera de 2.60–3.40; no se analiza.",
+      "alerts": ""
+    }
+  ],
+  "warnings": []
+}
